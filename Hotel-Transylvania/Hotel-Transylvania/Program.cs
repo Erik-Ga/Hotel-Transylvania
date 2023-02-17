@@ -1,10 +1,15 @@
-﻿namespace Hotel_Transylvania
+﻿using Hotel_Transylvania.Methods;
+using Hotel_Transylvania.Models;
+
+namespace Hotel_Transylvania
 {
     internal class Program
     {
-        static void Main(string[] args)
+        static async Task Main(string[] args)
         {
-            Console.WriteLine("Hello, World!");
+            // await MethodAPI.GetWeather();
+            Task saveGuest = Models.MongoDB.MongoDBSave();
+            await saveGuest;
         }
     }
 }
