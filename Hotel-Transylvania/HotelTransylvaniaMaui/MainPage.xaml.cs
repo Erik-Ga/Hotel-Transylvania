@@ -28,7 +28,7 @@
 
             if ((await weather).Temp > 8)
             {
-                weatherCurrent = "Poolen är öppen, kör på! Tempereaturen är: " + (await weather).Temp;
+                weatherCurrent = "Temperaturen är: " + (await weather).Temp + ", poolen är öppen, kör på!";
             }
             return weatherCurrent;
         }

@@ -1,7 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="HotelTransylvaniaMaui.MainPage">
+             x:Class="HotelTransylvaniaMaui.MainPage"
+             Title="Hotel Transylvania Main Page">
 
     <ScrollView>
         <VerticalStackLayout
@@ -11,20 +12,36 @@
 
             <Button
                 Text="Boka rum"
+                TextColor="Red"
+                FontFamily="Papyrus"
+                BackgroundColor="DarkSlateGray"
                 Clicked="OnClickedChangeToHotelLayout"
-                Margin="20"/>
+                Margin="20"
+                Padding="10"
+                WidthRequest="100"/>
             <ScrollView/>
+            <Grid>
+                <Image
+                    x:Name="backgroundImage"
+                    Source="hotel.jpg"
+                    Aspect="AspectFill"
+                    HorizontalOptions="Start"/>
 
-            <Image
-                Source="hotel.jpg"
-                Scale="1.5"
-                SemanticProperties.Description="Cute dot net bot waving hi to you!"
-                HeightRequest="200"
-                HorizontalOptions="Center" />
+
+            </Grid>
 
             <Label
                 x:Name="MyLabelInfo"
                 Text="Welcome to Hotel Transylvania!"
+                FontFamily="Chiller"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+            <Label
+                x:Name="MyLabelInfoTwo"
+                Text="Welcome to Hotel Transylvania!"
+                FontFamily="Papyrus"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="16"
                 HorizontalOptions="Center"
@@ -33,6 +50,9 @@
             <Button
                 x:Name="CounterBtn"
                 Text="Click me"
+                FontFamily="Papyrus"
+                TextColor="Red"
+                BackgroundColor="DarkSlateGray"
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
