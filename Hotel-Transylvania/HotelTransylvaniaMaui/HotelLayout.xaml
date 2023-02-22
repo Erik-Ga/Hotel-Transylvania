@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelTransylvaniaMaui.HotelLayout"
+             Title="HotelLayout">
+    <VerticalStackLayout>
+        <ScrollView/>
+        <Label 
+            Text="Welcome to .NET MAUI!"
+            VerticalOptions="Center" 
+            HorizontalOptions="Center" />
+        <Grid
+            RowDefinitions="100, 300"
+            ColumnDefinitions=".50*, .50*"
+            Padding="1"
+            RowSpacing="1"
+            ColumnSpacing="1"
+            >
+
+            <ImageButton Source="zombiedoor.png"
+                        Clicked="OnZombieDoorClicked"
+                   Grid.Row="1" Grid.Column="0"
+                   Scale="0.8"></ImageButton>
+            <Image Source="werewolfdoor.png"
+                   Grid.Row="1" Grid.Column="1"></Image>
+            <Image Source="trolldoor.png"
+                   Grid.Row="2" Grid.Column="2"></Image>
+            <Label Grid.Row="0" Grid.Column="0"
+                Text="Överst till höger"
+                   HorizontalOptions="Center"
+                   VerticalOptions="Center"></Label>
+            <Label Grid.Row="0" Grid.Column="0"
+                Text="Överst till höger"
+                   HorizontalOptions="Start"
+                   VerticalOptions="Start"></Label>
+
+        </Grid>
+    </VerticalStackLayout>
+</ContentPage>
