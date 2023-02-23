@@ -10,10 +10,10 @@ using System.Threading.Tasks;
 
 namespace HotelTransylvaniaMaui
 {
-    internal class WeatherAPI
+    internal class MainPageViewModel
     {
         public Models.WeatherData WeatherData { get; set; }
-        public WeatherAPI() 
+        public MainPageViewModel() 
         {
             var task = Task.Run(() => GetWeatherAsync());
             task.Wait();

@@ -7,7 +7,7 @@
         public MainPage()
         {
             InitializeComponent();
-            BindingContext = new WeatherAPI().WeatherData;
+            BindingContext = new MainPageViewModel().WeatherData;
         }
 
         private async void OnCounterClicked(object sender, EventArgs e)

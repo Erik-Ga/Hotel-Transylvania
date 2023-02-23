@@ -3,10 +3,42 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HotelTransylvaniaMaui.ZombieDoorPage"
              Title="The Infected Area">
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
         <Label 
             Text="Welcome to Zombie Room!"
             VerticalOptions="Center" 
             HorizontalOptions="Center" />
-    </VerticalStackLayout>
+        <ListView
+            ItemsSource="{Binding Rooms}"
+            ItemSelected="OnListViewitemSelected">
+            <ListView.ItemTemplate>
+                <DataTemplate>
+                    <ViewCell>
+                        <Grid Padding="10"
+                              RowDefinitions="Auto, *"
+                              ColumnDefinitions="200, *"
+                              ColumnSpacing="20">
+                            <Image Grid.RowSpan="2"
+                                   Source="{Binding ImageSource}"
+                                   Aspect="Fill"
+                                   HeightRequest="200"/>
+                            <Label Grid.Column="1"
+                                   Text="{Binding RoomName}"
+                                   FontSize="32"/>
+                            <Label Grid.Row="1"
+                                   Grid.Column="2"
+                                   Text="{Binding RoomDescription}"
+                                   FontSize="32"/>
+                            <Label Grid.Row="1"
+                                   Grid.Column="1"
+                                   Text="{Binding Price, StringFormat='{0} kr'}"
+                                   FontSize="15"/>
+                        </Grid>
+                    </ViewCell>
+                </DataTemplate>
+            </ListView.ItemTemplate>
+        </ListView>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
