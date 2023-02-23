@@ -5,6 +5,12 @@
              Title="HotelLayout">
     <ScrollView>
         <VerticalStackLayout>
+            <Label
+                Text="Vänligen välj ett rum"
+                FontSize="60"
+                TextColor="DarkRed"
+                FontFamily="Chiller"
+                HorizontalOptions="Center"/>
             <Grid>
                 <Grid.RowDefinitions>
                     <RowDefinition Height="600"/>
@@ -17,82 +23,177 @@
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="*"/>
                 </Grid.ColumnDefinitions>
+
+                <Label
+                    Text="The Infected Area"
+                    Grid.Column="0"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Column="0"
+                    Source="zombiedoor.png"
+                    Clicked="OnZombieDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Rattling Grave"
+                    Grid.Column="1"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Column="1"
+                    Source="skeletondoor.png"
+                    Clicked="OnSkeletonDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Haunted Attic"
+                    Grid.Column="2"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Column="2"
+                    Source="ghostdoor.png"
+                    Clicked="OnGhostDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Bloody Chamber"
+                    Grid.Row="1"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Row="1"
+                    Source="vampiredoor.png"
+                    Clicked="OnVampireDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Stinky Cave"
+                    Grid.Column="1"
+                    Grid.Row="1"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Row="1"
+                    Grid.Column="1"
+                    Source="trolldoor.png"
+                    Clicked="OnTrollDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Forsaken Tomb"
+                    Grid.Column="2"
+                    Grid.Row="1"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Row="1"
+                    Grid.Column="2"
+                    Source="mummydoor.png"
+                    Clicked="OnMummyDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Bewitched Cabin"
+                    Grid.Row="2"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Row="2"
+                    Source="witchdoor.png"
+                    Clicked="OnWitchDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Dark Den"
+                    Grid.Column="1"
+                    Grid.Row="2"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Row="2"
+                    Grid.Column="1"
+                    Source="werewolfdoor.png"
+                    Clicked="OnWerewolfDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
+
+                <Label
+                    Text="The Dragon Dungeon"
+                    Grid.Column="2"
+                    Grid.Row="2"
+                    FontSize="35"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="20"
+                    />
+                <ImageButton 
+                    Grid.Row="2"
+                    Grid.Column="2"
+                    Source="dragondoor.png"
+                    Clicked="OnDragonDoorClicked"
+                    Scale="0.8">
+                    </ImageButton>
+
+                <Label
+                    Text="The Hell Suit"
+                    Grid.Column="1"
+                    Grid.Row="3"
+                    FontSize="50"
+                    TextColor="DarkRed"
+                    FontFamily="Chiller"
+                    HorizontalOptions="Center"
+                    Padding="50"
+                    />
+                <ImageButton 
+                    Grid.Row="3"
+                    Grid.Column="1"
+                    Source="devildoor.png"
+                    Clicked="OnDevilDoorClicked"
+                    Scale="0.8">
+                </ImageButton>
                 
-                <ImageButton 
-                Grid.Column="0"
-                Source="zombiedoor.png"
-                Clicked="OnZombieDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Column="1"
-                Source="skeletondoor.png"
-                Clicked="OnSkeletonDoorClicked"
-                Scale="0.8">
-                </ImageButton>
-                
-                <ImageButton 
-                Grid.Column="2"
-                Source="ghostdoor.png"
-                Clicked="OnGhostDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Row="1"
-                Source="vampiredoor.png"
-                Clicked="OnVampireDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Row="1"
-                Grid.Column="1"
-                Source="trolldoor.png"
-                Clicked="OnTrollDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-                
-                <ImageButton 
-                Grid.Row="1"
-                Grid.Column="2"
-                Source="mummydoor.png"
-                Clicked="OnMummyDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Row="2"
-                Source="witchdoor.png"
-                Clicked="OnWitchDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Row="2"
-                Grid.Column="1"
-                Source="werewolfdoor.png"
-                Clicked="OnWerewolfDoorClicked"
-                Scale="0.8">                    
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Row="2"
-                Grid.Column="2"
-                Source="dragondoor.png"
-                Clicked="OnDragonDoorClicked"
-                Scale="0.8">
-                </ImageButton>
-
-                <ImageButton 
-                Grid.Row="3"
-                Grid.Column="1"
-                Source="devildoor.png"
-                Clicked="OnDevilDoorClicked"
-                Scale="0.8">
-                </ImageButton>
-
             </Grid>
         </VerticalStackLayout>
     </ScrollView>

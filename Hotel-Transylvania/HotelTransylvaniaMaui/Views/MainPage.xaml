@@ -10,6 +10,16 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <Label
+                x:Name="MyLabelInfoTwo"
+                Text="Välkommen till hotell Transylvania!"
+                FontFamily="Chiller"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="70"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="40"/>
+
             <Button
                 Text="Boka rum"
                 TextColor="Red"
@@ -19,7 +29,7 @@
                 Margin="20"
                 Padding="10"
                 WidthRequest="100"/>
-            <ScrollView/>
+
             <Grid>
                 <Image
                     x:Name="backgroundImage"
@@ -37,14 +47,6 @@
                 FontSize="24"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-            <Label
-                x:Name="MyLabelInfoTwo"
-                Text="Welcome to Hotel Transylvania!"
-                FontFamily="Papyrus"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="16"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
 
             <Button
                 x:Name="CounterBtn"
@@ -55,8 +57,6 @@
                 SemanticProperties.Hint="Counts the number of times you click"
                 Clicked="OnCounterClicked"
                 HorizontalOptions="Center" />
-            
-
         </VerticalStackLayout>
     </ScrollView>
 
