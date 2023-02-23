@@ -31,8 +31,7 @@
             </Grid>
 
             <Label
-                x:Name="MyLabelInfo"
-                Text="Welcome to Hotel Transylvania!"
+                Text="{Binding CurrentWeather}"
                 FontFamily="Chiller"
                 SemanticProperties.HeadingLevel="Level1"
                 FontSize="24"
