@@ -3,37 +3,97 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HotelTransylvaniaMaui.HotelLayout"
              Title="HotelLayout">
-    <VerticalStackLayout>
-        <ScrollView/>
-        <Label 
-            Text="Welcome to .NET MAUI!"
-            VerticalOptions="Center" 
-            HorizontalOptions="Center" />
-        <Grid
-            RowDefinitions="100, 300"
-            ColumnDefinitions=".50*, .50*"
-            Padding="1"
-            RowSpacing="1"
-            ColumnSpacing="1"
-            >
+    <ScrollView>
+        <VerticalStackLayout>
+            <Grid>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="600"/>
+                    <RowDefinition Height="600"/>
+                    <RowDefinition Height="600"/>
+                    <RowDefinition Height="1000"/>
+                </Grid.RowDefinitions>
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                
+                <ImageButton 
+                Grid.Column="0"
+                Source="zombiedoor.png"
+                Clicked="OnZombieDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
 
-            <ImageButton Source="zombiedoor.png"
-                        Clicked="OnZombieDoorClicked"
-                   Grid.Row="1" Grid.Column="0"
-                   Scale="0.8"></ImageButton>
-            <Image Source="werewolfdoor.png"
-                   Grid.Row="1" Grid.Column="1"></Image>
-            <Image Source="trolldoor.png"
-                   Grid.Row="2" Grid.Column="2"></Image>
-            <Label Grid.Row="0" Grid.Column="0"
-                Text="Överst till höger"
-                   HorizontalOptions="Center"
-                   VerticalOptions="Center"></Label>
-            <Label Grid.Row="0" Grid.Column="0"
-                Text="Överst till höger"
-                   HorizontalOptions="Start"
-                   VerticalOptions="Start"></Label>
+                <ImageButton 
+                Grid.Column="1"
+                Source="skeletondoor.png"
+                Clicked="OnSkeletonDoorClicked"
+                Scale="0.8">
+                </ImageButton>
+                
+                <ImageButton 
+                Grid.Column="2"
+                Source="ghostdoor.png"
+                Clicked="OnGhostDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
 
-        </Grid>
-    </VerticalStackLayout>
+                <ImageButton 
+                Grid.Row="1"
+                Source="vampiredoor.png"
+                Clicked="OnVampireDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
+
+                <ImageButton 
+                Grid.Row="1"
+                Grid.Column="1"
+                Source="trolldoor.png"
+                Clicked="OnTrollDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
+                
+                <ImageButton 
+                Grid.Row="1"
+                Grid.Column="2"
+                Source="mummydoor.png"
+                Clicked="OnMummyDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
+
+                <ImageButton 
+                Grid.Row="2"
+                Source="witchdoor.png"
+                Clicked="OnWitchDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
+
+                <ImageButton 
+                Grid.Row="2"
+                Grid.Column="1"
+                Source="werewolfdoor.png"
+                Clicked="OnWerewolfDoorClicked"
+                Scale="0.8">                    
+                </ImageButton>
+
+                <ImageButton 
+                Grid.Row="2"
+                Grid.Column="2"
+                Source="dragondoor.png"
+                Clicked="OnDragonDoorClicked"
+                Scale="0.8">
+                </ImageButton>
+
+                <ImageButton 
+                Grid.Row="3"
+                Grid.Column="1"
+                Source="devildoor.png"
+                Clicked="OnDevilDoorClicked"
+                Scale="0.8">
+                </ImageButton>
+
+            </Grid>
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>
