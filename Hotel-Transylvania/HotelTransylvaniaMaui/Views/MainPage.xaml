@@ -59,5 +59,4 @@
                 HorizontalOptions="Center" />
         </VerticalStackLayout>
     </ScrollView>
-
 </ContentPage>

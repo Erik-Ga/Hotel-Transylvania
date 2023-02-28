@@ -16,7 +16,5 @@ public partial class ZombieDoorPage : ContentPage
             page.BindingContext = product;
             await Navigation.PushAsync(page);
         }
-
-
     }
 }
