@@ -11,6 +11,7 @@ public partial class HotelLayout : ContentPage
         BindingContext = new ViewModels.HotelLayoutViewModel();
     }
 
+    // Printar ut alla rum ifrån MongoDb
     bool pageStarted = false;
     protected override async void OnAppearing()
     {
@@ -22,6 +23,7 @@ public partial class HotelLayout : ContentPage
         }
     }
 
+    // Gör så att man kan klicka på rum
     private async void OnListViewitemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         var product = ((ListView)sender).SelectedItem as Models.Room;

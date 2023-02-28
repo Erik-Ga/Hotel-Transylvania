@@ -12,6 +12,8 @@ namespace HotelTransylvaniaMaui
 {
     internal class MainPageViewModel
     {
+
+        // Skapar en instans av API för att man ska kunna hämta och hänvisa till API-data
         public Models.WeatherData WeatherData { get; set; }
         public MainPageViewModel() 
         {
@@ -27,7 +29,8 @@ namespace HotelTransylvaniaMaui
                 WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är stängd, kom tillbaka en annan dag!";
             }
         }
-
+        
+        // Data för att kommunicera med API
         public static async Task<Models.WeatherData> GetWeatherAsync()
         {
             Console.WriteLine("Getting weather!");

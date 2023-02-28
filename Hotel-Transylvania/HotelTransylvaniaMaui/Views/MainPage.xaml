@@ -19,9 +19,25 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="40"/>
+            <Label
+                Text="{Binding CurrentWeather}"
+                FontFamily="Chiller"
+                SemanticProperties.HeadingLevel="Level1"
+                FontSize="24"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
 
             <Button
                 Text="Boka rum"
+                TextColor="Red"
+                FontFamily="Papyrus"
+                BackgroundColor="DarkSlateGray"
+                Clicked="OnClickedChangeToHotelLayout"
+                Margin="20"
+                Padding="10"
+                WidthRequest="100"/>
+            <Button
+                Text="Admin"
                 TextColor="Red"
                 FontFamily="Papyrus"
                 BackgroundColor="DarkSlateGray"
@@ -40,23 +56,8 @@
 
             </Grid>
 
-            <Label
-                Text="{Binding CurrentWeather}"
-                FontFamily="Chiller"
-                SemanticProperties.HeadingLevel="Level1"
-                FontSize="24"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
 
-            <Button
-                x:Name="CounterBtn"
-                Text="Click me"
-                FontFamily="Papyrus"
-                TextColor="Red"
-                BackgroundColor="DarkSlateGray"
-                SemanticProperties.Hint="Counts the number of times you click"
-                Clicked="OnCounterClicked"
-                HorizontalOptions="Center" />
+
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

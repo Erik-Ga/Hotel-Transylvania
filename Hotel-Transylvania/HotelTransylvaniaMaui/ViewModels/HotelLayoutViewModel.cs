@@ -13,9 +13,9 @@ namespace HotelTransylvaniaMaui.ViewModels
 {
     internal partial class HotelLayoutViewModel : ObservableObject
     {
-        [ObservableProperty] // ÄNDRAT!
+        // Autogenererande kod
+        [ObservableProperty]
         ObservableCollection<Models.Room> rooms;
-        //public List<Models.Product> Products { get; set; }
 
         [ObservableProperty]
         Guid id;
@@ -27,6 +27,8 @@ namespace HotelTransylvaniaMaui.ViewModels
         string imageSource;
         [ObservableProperty]
         string roomDescription;
+
+        // Skapande av lista för rum
         public HotelLayoutViewModel() 
         {
             Rooms = new ObservableCollection<Models.Room>();
@@ -104,6 +106,7 @@ namespace HotelTransylvaniaMaui.ViewModels
 
         }
 
+        // Lägger till rum i MongoDb metod
         [RelayCommand]
         public async void AddRoom()
         {
@@ -121,6 +124,7 @@ namespace HotelTransylvaniaMaui.ViewModels
             Rooms.Add(room);
         }
 
+        // Tar bort rum i MongoDb metod
         [RelayCommand]
         public async void DeleteRoom(object r)
         {
@@ -129,11 +133,14 @@ namespace HotelTransylvaniaMaui.ViewModels
             Rooms.Remove(room);
         }
 
+        // Hämtar alla rum i MongoDb metod
         public async Task GetRooms()
         {
             List<Room> roomsFromDb = await GetDbCollection().AsQueryable().ToListAsync();
             roomsFromDb.ForEach(x => Rooms.Add(x));
         }
+
+        // Data för att kommunicera med MongoDb
         public IMongoCollection<Models.Room> GetDbCollection()
         {
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://Erik:Pumpa123@cluster0.kh2vogk.mongodb.net/?retryWrites=true&w=majority");
