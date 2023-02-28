@@ -8,6 +8,7 @@ namespace HotelTransylvaniaMaui.Models
 {
     internal class Room
     {
+        public Guid Id { get; set; }
         public string RoomName { get; set; }
         public int Price { get; set; }
         public string ImageSource { get; set; }
