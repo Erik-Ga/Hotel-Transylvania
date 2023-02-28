@@ -1,17 +1,33 @@
-﻿using System;
+﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
+using System;
 using System.Collections.Generic;
+using System.Collections.ObjectModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
 namespace HotelTransylvaniaMaui.ViewModels
 {
-    internal class HotelLayoutViewModel
+    internal partial class HotelLayoutViewModel : ObservableObject
     {
-        public List<Models.Room> Rooms { get; set; }
+        [ObservableProperty] // ÄNDRAT!
+        ObservableCollection<Models.Room> rooms;
+        //public List<Models.Product> Products { get; set; }
+
+        [ObservableProperty]
+        Guid id;
+        [ObservableProperty]
+        string roomName;
+        [ObservableProperty]
+        int price;
+        [ObservableProperty]
+        string imageSource;
+        [ObservableProperty]
+        string roomDescription;
         public HotelLayoutViewModel() 
         {
-            Rooms = new List<Models.Room>();
+            Rooms = new ObservableCollection<Models.Room>();
 
             Rooms.Add(new Models.Room
             {
@@ -84,5 +100,38 @@ namespace HotelTransylvaniaMaui.ViewModels
                 RoomDescription = "Devil Placeholder"
             });
         }
+
+        //[RelayCommand]
+        //public async void AddProduct()
+        //{
+        //    Product product = new Product()
+        //    {
+        //        Id = Guid.NewGuid(),
+        //        ProductName = ProductName,
+        //        Price = Price,
+        //        ImageSource = ImageSource,
+        //        Details = Details
+        //    };
+
+        //    await GetDbCollection().InsertOneAsync(product);
+
+        //    Products.Add(product);
+        //}
+
+        //[RelayCommand]
+        //public async void DeleteProduct(object p)
+        //{
+        //    var prod = (Product)p;
+        //    await GetDbCollection().DeleteOneAsync(x => x.Id == prod.Id);
+        //    Products.Remove(prod);
+        //}
+
+        //public async Task GetProducts()
+        //{
+        //    List<Product> productsFromDb = await GetDbCollection().AsQueryable().ToListAsync();
+        //    await Task.Delay(3000);
+        //    productsFromDb.ForEach(x => Products.Add(x));
+        //    Console.WriteLine("Hej");
+        //}
     }
 }

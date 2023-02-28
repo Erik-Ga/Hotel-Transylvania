@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelTransylvaniaMaui.Views.RoomDetailsPage"
+             Title="{Binding RoomName}">
+    <VerticalStackLayout>
+        <Label Text="{Binding RoomName}"
+              HorizontalOptions="Center"
+              Style="{DynamicResource TitleStyle}"></Label>
+        <Label Text="{Binding Price, StringFormat='{0} kronor'}"
+               TextColor="Red"
+               FontSize="25"
+               HorizontalOptions="Center"></Label>
+        <Image Source="{Binding ImageSource}"
+               HeightRequest="400"
+               HorizontalOptions="Center"></Image>
+        <Label Text="{Binding RoomDescription}"
+               HorizontalOptions="Center"
+               Style="{DynamicResource SubtitleStyle}"></Label>
+
+
+        <Button
+            Text="Tillbaka till butiken"
+            Clicked="OnBackClicked"
+            HorizontalOptions="Center"></Button>
+    </VerticalStackLayout>
+</ContentPage>
