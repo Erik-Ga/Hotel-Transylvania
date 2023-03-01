@@ -1,14 +1,17 @@
 using HotelTransylvaniaMaui.ViewModels;
 using HotelTransylvaniaMaui.Views;
+using Plugin.Maui.Audio;
 
 namespace HotelTransylvaniaMaui;
 
 public partial class HotelLayout : ContentPage
 {
-	public HotelLayout()
+    private readonly IAudioManager audioManager;
+    public HotelLayout(IAudioManager audioManager)
 	{
 		InitializeComponent();
         BindingContext = new ViewModels.HotelLayoutViewModel();
+        this.audioManager = audioManager;
     }
 
     // Printar ut alla rum ifrån MongoDb
@@ -26,11 +29,17 @@ public partial class HotelLayout : ContentPage
     // Gör så att man kan klicka på rum
     private async void OnListViewitemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-        var product = ((ListView)sender).SelectedItem as Models.Room;
-        if (product != null)
+        var room = ((ListView)sender).SelectedItem as Models.Room;
+
+        var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(room.SoundSource));
+        player.Play();
+        await Task.Delay(1000);
+        player.Dispose();
+
+        if (room != null)
         {
             var page = new RoomDetailsPage();
-            page.BindingContext = product;
+            page.BindingContext = room;
             await Navigation.PushAsync(page);
         }
     }

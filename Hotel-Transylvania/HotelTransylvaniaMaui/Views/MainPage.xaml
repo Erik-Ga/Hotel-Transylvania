@@ -15,15 +15,16 @@
                 x:Name="MyLabelInfoTwo"
                 Text="Välkommen till hotell Transylvania!"
                 FontFamily="Chiller"
+                TextColor="DarkRed"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="70"
+                FontSize="170"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="40"/>
             <Label
                 Text="{Binding CurrentWeather}"
                 FontFamily="Chiller"
-                FontSize="30"
+                FontSize="90"
                 TextColor="DarkRed"
                 SemanticProperties.HeadingLevel="Level1"
                 HorizontalOptions="Center"

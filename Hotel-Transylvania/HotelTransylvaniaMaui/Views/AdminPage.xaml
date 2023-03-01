@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HotelTransylvaniaMaui.Views.AdminPage"
              xmlns:viewmodel="clr-namespace:HotelTransylvaniaMaui.ViewModels"
-             x:DataType="viewmodel:HotelLayoutViewModel"
+             x:DataType="viewmodel:AdminPageViewModel"
              Title="AdminPage">
     <ScrollView>
         <VerticalStackLayout>
@@ -13,6 +13,8 @@
                    Text="{Binding Price}"/>
             <Entry Placeholder="Bild"
                    Text="{Binding ImageSource}"/>
+            <Entry Placeholder="Ljud"
+                   Text="{Binding SoundSource}"/>
             <Entry Placeholder="Detaljer"
                    Text="{Binding RoomDescription}"/>
 

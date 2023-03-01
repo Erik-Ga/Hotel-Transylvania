@@ -32,12 +32,6 @@
                                    Grid.Column="2"
                                    Text="{Binding RoomDescription}"
                                    FontSize="32"/>
-                                <Button Grid.Column="2" Text="Radera"
-                                        Margin="20"
-                                        Padding="10"
-                                        WidthRequest="100"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HotelLayoutViewModel}}, Path=DeleteRoomCommand}"
-                                        CommandParameter="{Binding .}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

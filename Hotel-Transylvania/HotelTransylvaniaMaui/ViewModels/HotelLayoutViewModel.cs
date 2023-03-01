@@ -16,7 +16,6 @@ namespace HotelTransylvaniaMaui.ViewModels
         // Autogenererande kod
         [ObservableProperty]
         ObservableCollection<Models.Room> rooms;
-
         [ObservableProperty]
         Guid id;
         [ObservableProperty]
@@ -25,6 +24,8 @@ namespace HotelTransylvaniaMaui.ViewModels
         int price;
         [ObservableProperty]
         string imageSource;
+        [ObservableProperty]
+        string soundSource;
         [ObservableProperty]
         string roomDescription;
 
@@ -116,6 +117,7 @@ namespace HotelTransylvaniaMaui.ViewModels
                 RoomName = RoomName,
                 Price = Price,
                 ImageSource = ImageSource,
+                SoundSource = SoundSource,
                 RoomDescription = RoomDescription
             };
 
