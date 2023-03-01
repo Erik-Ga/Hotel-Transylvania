@@ -1,4 +1,6 @@
-﻿namespace HotelTransylvaniaMaui
+﻿using HotelTransylvaniaMaui.Views;
+
+namespace HotelTransylvaniaMaui
 {
     public partial class MainPage : ContentPage
     {
@@ -14,6 +16,10 @@
         private async void OnClickedChangeToHotelLayout(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new HotelLayout());
+        }
+        private async void OnClickedChangeToAdminPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new AdminPage());
         }
     }
 }
