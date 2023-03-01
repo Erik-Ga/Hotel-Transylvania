@@ -52,7 +52,7 @@
                                         Margin="20"
                                         Padding="10"
                                         WidthRequest="100"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:HotelLayoutViewModel}}, Path=DeleteRoomCommand}"
+                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminPageViewModel}}, Path=DeleteRoomCommand}"
                                         CommandParameter="{Binding .}"/>
                             </Grid>
                         </ViewCell>

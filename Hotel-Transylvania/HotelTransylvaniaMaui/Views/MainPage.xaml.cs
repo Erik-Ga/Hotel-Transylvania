@@ -26,7 +26,7 @@ namespace HotelTransylvaniaMaui
         }
         private async void OnClickedChangeToAdminPage(object sender, EventArgs e)
         {
-            await Navigation.PushAsync(new AdminPage());
+            await Navigation.PushAsync(new AdminPage(AudioManager.Current));
         }
     }
 }
