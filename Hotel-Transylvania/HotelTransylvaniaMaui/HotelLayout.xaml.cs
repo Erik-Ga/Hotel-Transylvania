@@ -31,13 +31,11 @@ public partial class HotelLayout : ContentPage
     {
 
         var room = ((ListView)sender).SelectedItem as Models.Room;
-        int h = 1;
+        int h = 0;
         if (h == 0)
         {
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(room.SoundSource));
             player.Play();
-            await Task.Delay(1000);
-            player.Dispose();
 
             if (room != null)
             {

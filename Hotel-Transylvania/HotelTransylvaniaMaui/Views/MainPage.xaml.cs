@@ -18,21 +18,13 @@ namespace HotelTransylvaniaMaui
         // Byter sida till hotellayout
         private async void OnClickedChangeToHotelLayout(object sender, EventArgs e)
         {
-            //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("CantinaBand3.wav"));
-            //player.Play();
-            //await Task.Delay(3000);
-            //player.Dispose();
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("hotel.mp3"));
+            player.Play();
             await Navigation.PushAsync(new HotelLayout(AudioManager.Current));
         }
         private async void OnClickedChangeToAdminPage(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AdminPage(AudioManager.Current));
-        }
-        private async void Welcome(object sender, EventArgs e)
-        {
-            WelcomeLabel.Text = "Välkommen till hotell Transylvania!";
-            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("hotel.mp3"));
-            player.Play();
         }
     }
 }
