@@ -11,9 +11,19 @@
             Padding="30,0"
             VerticalOptions="Center">
 
+            <Button
+                Text="Spooky"
+                TextColor="DarkRed"
+                FontFamily="Chiller"
+                FontSize="30"
+                BackgroundColor="DarkSlateGrey"
+                Clicked="Welcome"
+                Margin="20"
+                Padding="10"
+                WidthRequest="110"/>
             <Label
                 x:Name="WelcomeLabel"
-                Text="{Binding Welcome}"
+                Text="Välkommen till hotell Transylvania!"
                 FontFamily="Chiller"
                 TextColor="DarkRed"
                 SemanticProperties.HeadingLevel="Level1"
