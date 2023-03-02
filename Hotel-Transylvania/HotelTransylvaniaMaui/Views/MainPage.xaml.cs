@@ -28,5 +28,11 @@ namespace HotelTransylvaniaMaui
         {
             await Navigation.PushAsync(new AdminPage(AudioManager.Current));
         }
+        private async void Welcome(object sender, EventArgs e)
+        {
+            WelcomeLabel.Text = "Välkommen till hotell Transylvania!";
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("hotel.mp3"));
+            player.Play();
+        }
     }
 }

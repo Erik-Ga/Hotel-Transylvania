@@ -29,18 +29,28 @@ public partial class HotelLayout : ContentPage
     // Gör så att man kan klicka på rum
     private async void OnListViewitemSelected(object sender, SelectedItemChangedEventArgs e)
     {
+
         var room = ((ListView)sender).SelectedItem as Models.Room;
-
-        var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(room.SoundSource));
-        player.Play();
-        await Task.Delay(1000);
-        player.Dispose();
-
-        if (room != null)
+        int h = 1;
+        if (h == 0)
         {
-            var page = new RoomDetailsPage();
-            page.BindingContext = room;
-            await Navigation.PushAsync(page);
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(room.SoundSource));
+            player.Play();
+            await Task.Delay(1000);
+            player.Dispose();
+
+            if (room != null)
+            {
+                var page = new RoomDetailsPage();
+                page.BindingContext = room;
+                await Navigation.PushAsync(page);
+            }
         }
+        else
+        {
+            await DisplayAlert("Tyvärr", "Rummet du valt är tyvärr bokat", "Ok");
+        }
+
+
     }
 }

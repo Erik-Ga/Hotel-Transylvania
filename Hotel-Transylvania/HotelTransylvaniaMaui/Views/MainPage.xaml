@@ -12,8 +12,8 @@
             VerticalOptions="Center">
 
             <Label
-                x:Name="MyLabelInfoTwo"
-                Text="Välkommen till hotell Transylvania!"
+                x:Name="WelcomeLabel"
+                Text="{Binding Welcome}"
                 FontFamily="Chiller"
                 TextColor="DarkRed"
                 SemanticProperties.HeadingLevel="Level1"

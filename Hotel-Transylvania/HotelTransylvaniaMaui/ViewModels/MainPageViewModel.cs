@@ -15,12 +15,12 @@ namespace HotelTransylvaniaMaui
 
         // Skapar en instans av API för att man ska kunna hämta och hänvisa till API-data
         public Models.WeatherData WeatherData { get; set; }
-        public MainPageViewModel() 
+        public MainPageViewModel()
         {
             var task = Task.Run(() => GetWeatherAsync());
             task.Wait();
             WeatherData = task.Result;
-            if(WeatherData.Temp >= 20)
+            if (WeatherData.Temp >= 20)
             {
                 WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är öppen, kör på!";
             }
@@ -29,7 +29,7 @@ namespace HotelTransylvaniaMaui
                 WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är stängd, kom tillbaka en annan dag!";
             }
         }
-        
+
         // Data för att kommunicera med API
         public static async Task<Models.WeatherData> GetWeatherAsync()
         {
