@@ -28,7 +28,7 @@
                                 <Image
                                    Grid.Row="0"
                                    Grid.Column="0"
-                                   Source="label3.png"
+                                   Source="zombiegif2.gif"
                                    Aspect="Fill"/>
                                 <Label                                    
                                    Grid.Column="0"

@@ -13,10 +13,14 @@
                    Text="{Binding Price}"/>
             <Entry Placeholder="Bild"
                    Text="{Binding ImageSource}"/>
+            <Entry Placeholder="Titel Bild"
+                   Text="{Binding LabelSource}"/>
             <Entry Placeholder="Ljud"
                    Text="{Binding SoundSource}"/>
             <Entry Placeholder="Detaljer"
                    Text="{Binding RoomDescription}"/>
+            <Entry Placeholder="Bokad"
+                   Text="{Binding IsBooked}"/>
 
             <Button
                 Command="{Binding AddRoomCommand}"

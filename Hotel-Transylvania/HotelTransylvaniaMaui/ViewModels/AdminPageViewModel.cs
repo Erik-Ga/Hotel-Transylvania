@@ -20,9 +20,13 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string imageSource;
         [ObservableProperty]
+        string labelSource;
+        [ObservableProperty]
         string soundSource;
         [ObservableProperty]
         string roomDescription;
+        [ObservableProperty]
+        bool isBooked;
 
         // Skapande av lista för rum
         public AdminPageViewModel()
@@ -40,8 +44,11 @@ namespace HotelTransylvaniaMaui.ViewModels
                 RoomName = RoomName,
                 Price = Price,
                 ImageSource = ImageSource,
+                LabelSource = LabelSource,
                 SoundSource = SoundSource,
-                RoomDescription = RoomDescription
+                RoomDescription = RoomDescription,
+                IsBooked = IsBooked
+
             };
 
             await GetDbCollection().InsertOneAsync(room);
