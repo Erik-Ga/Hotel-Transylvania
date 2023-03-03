@@ -17,17 +17,17 @@ namespace HotelTransylvaniaMaui
         public Models.WeatherData WeatherData { get; set; }
         public MainPageViewModel()
         {
-            var task = Task.Run(() => GetWeatherAsync());
-            task.Wait();
-            WeatherData = task.Result;
-            if (WeatherData.Temp >= 20)
-            {
-                WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är öppen, kör på!";
-            }
-            else
-            {
-                WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är stängd, kom tillbaka en annan dag!";
-            }
+            //var task = Task.Run(() => GetWeatherAsync());
+            //task.Wait();
+            //WeatherData = task.Result;
+            //if (WeatherData.Temp >= 20)
+            //{
+            //    WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är öppen, kör på!";
+            //}
+            //else
+            //{
+            //    WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är stängd, kom tillbaka en annan dag!";
+            //}
         }
 
         // Data för att kommunicera med API

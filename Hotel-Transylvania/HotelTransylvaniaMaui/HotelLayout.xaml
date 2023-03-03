@@ -15,24 +15,42 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="10"
-                              RowDefinitions="100, 100, 100"
-                              ColumnDefinitions="300, *"
+                              RowDefinitions="100, 100, 100, 100, 100"
+                              ColumnDefinitions="500, *"
                               ColumnSpacing="5">
-                                <Image Grid.RowSpan="3"
+                                <Image MaximumWidthRequest="300"
+                                   Grid.Row="1"
+                                   Grid.RowSpan="5"
                                    Source="{Binding ImageSource}"
                                    Aspect="Fill"
-                                   HeightRequest="200"/>
-                                <Label Grid.Column="0"
+                                   HeightRequest="400"/>
+                                <Border
+                                    Stroke="DarkRed"
+                                    StrokeThickness="5"                                   
+                                    >                                    
+                                   <Label 
+                                   
+                                   Grid.Column="0"
                                    Text="{Binding RoomName}"
-                                   FontSize="32"/>
+                                   TextColor="DarkRed"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   FontFamily="Chiller"
+                                   FontAttributes="Bold"
+                                   FontSize="60"/>
+                                </Border>
                                 <Label Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Price, StringFormat='{0} kr'}"
-                                   FontSize="35"/>
+                                   TextColor="DarkRed"
+                                   FontFamily="Chiller"
+                                   FontSize="50"/>
                                 <Label Grid.Row="2"
                                    Grid.Column="1"
                                    Text="{Binding RoomDescription}"
-                                   FontSize="15"/>
+                                   TextColor="DarkRed"
+                                   FontFamily="Chiller"
+                                   FontSize="50"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
