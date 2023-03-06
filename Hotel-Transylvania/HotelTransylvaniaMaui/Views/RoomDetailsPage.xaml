@@ -6,23 +6,34 @@
              Title="{Binding RoomName}">
     <VerticalStackLayout>
         <Label Text="{Binding RoomName}"
+               FontFamily="Chiller"
+               FontAttributes="Bold"
+               FontSize="60"
               HorizontalOptions="Center"
               Style="{DynamicResource TitleStyle}"></Label>
         <Label Text="{Binding Price, StringFormat='{0} kronor'}"
-               TextColor="Red"
-               FontSize="25"
+               TextColor="DarkRed"
+               FontAttributes="Bold"
+               FontFamily="Chiller"
+               FontSize="45"
                HorizontalOptions="Center"></Label>
         <Image Source="{Binding ImageSource}"
                HeightRequest="400"
                HorizontalOptions="Center"></Image>
         <Label Text="{Binding RoomDescription}"
+               FontAttributes="Bold"
+               FontFamily="Chiller"
+               FontSize="40"
                HorizontalOptions="Center"
                Style="{DynamicResource SubtitleStyle}"></Label>
 
 
         <Button
-            Text="Tillbaka till butiken"
+            Text="Tillbaka till lobbyn"
             Clicked="OnBackClicked"
+            FontFamily="Chiller"
+            FontAttributes="Bold"
+            FontSize="30"
             HorizontalOptions="Center"></Button>
     </VerticalStackLayout>
 </ContentPage>
