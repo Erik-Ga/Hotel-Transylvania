@@ -13,6 +13,8 @@
                    Text="{Binding Price}"/>
             <Entry Placeholder="Bild"
                    Text="{Binding ImageSource}"/>
+            <Entry Placeholder="Rum Bild"
+                   Text="{Binding ImageRoomSource}"/>
             <Entry Placeholder="Titel Bild"
                    Text="{Binding LabelSource}"/>
             <Entry Placeholder="Ljud"

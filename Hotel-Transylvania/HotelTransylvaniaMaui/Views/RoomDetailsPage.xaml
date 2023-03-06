@@ -2,9 +2,10 @@
 <ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HotelTransylvaniaMaui.Views.RoomDetailsPage"
-             BackgroundImageSource="hotel.jpg"
+             BackgroundImageSource="{Binding ImageRoomSource}"
              Title="{Binding RoomName}">
-    <VerticalStackLayout>
+    <ScrollView>
+        <VerticalStackLayout>
         <Label Text="{Binding RoomName}"
                FontFamily="Chiller"
                FontAttributes="Bold"
@@ -27,8 +28,15 @@
                HorizontalOptions="Center"
                Style="{DynamicResource SubtitleStyle}"></Label>
 
+            <Button
+            Text="Boka rum"
+            Clicked="OnClickedBookRoom"
+            FontFamily="Chiller"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalOptions="Center"></Button>
 
-        <Button
+            <Button
             Text="Tillbaka till lobbyn"
             Clicked="OnBackClicked"
             FontFamily="Chiller"
@@ -36,4 +44,5 @@
             FontSize="30"
             HorizontalOptions="Center"></Button>
     </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

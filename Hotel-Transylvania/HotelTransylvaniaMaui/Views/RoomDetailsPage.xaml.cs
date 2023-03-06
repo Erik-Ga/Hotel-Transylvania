@@ -10,4 +10,8 @@ public partial class RoomDetailsPage : ContentPage
     {
         Navigation.PopAsync();  
     }
+    private void OnClickedBookRoom(object sender, EventArgs e)
+    {
+        
+    }
 }

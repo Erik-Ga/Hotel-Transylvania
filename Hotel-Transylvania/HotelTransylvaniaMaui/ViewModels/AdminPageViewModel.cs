@@ -20,6 +20,8 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string imageSource;
         [ObservableProperty]
+        string imageRoomSource;
+        [ObservableProperty]
         string labelSource;
         [ObservableProperty]
         string soundSource;
@@ -44,6 +46,7 @@ namespace HotelTransylvaniaMaui.ViewModels
                 RoomName = RoomName,
                 Price = Price,
                 ImageSource = ImageSource,
+                ImageRoomSource = imageRoomSource,
                 LabelSource = LabelSource,
                 SoundSource = SoundSource,
                 RoomDescription = RoomDescription,

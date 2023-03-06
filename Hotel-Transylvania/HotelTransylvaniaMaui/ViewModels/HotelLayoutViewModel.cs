@@ -25,6 +25,8 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string imageSource;
         [ObservableProperty]
+        string imageRoomSource;
+        [ObservableProperty]
         string labelSource;
         [ObservableProperty]
         string soundSource;
@@ -110,37 +112,6 @@ namespace HotelTransylvaniaMaui.ViewModels
             //});
 
         }
-
-        // Lägger till rum i MongoDb metod
-        [RelayCommand]
-        public async void AddRoom()
-        {
-            Room room = new Room()
-            {
-                Id = Guid.NewGuid(),
-                RoomName = RoomName,
-                Price = Price,
-                ImageSource = ImageSource,
-                LabelSource = LabelSource,
-                SoundSource = SoundSource,
-                RoomDescription = RoomDescription,
-                IsBooked = IsBooked
-            };
-
-            await GetDbCollection().InsertOneAsync(room);
-
-            Rooms.Add(room);
-        }
-
-        // Tar bort rum i MongoDb metod
-        [RelayCommand]
-        public async void DeleteRoom(object r)
-        {
-            var room = (Room)r;
-            await GetDbCollection().DeleteOneAsync(x => x.Id == room.Id);
-            Rooms.Remove(room);
-        }
-
         // Hämtar alla rum i MongoDb metod
         public async Task GetRooms()
         {

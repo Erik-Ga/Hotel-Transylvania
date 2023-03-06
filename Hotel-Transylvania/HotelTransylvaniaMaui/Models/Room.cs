@@ -12,6 +12,7 @@ namespace HotelTransylvaniaMaui.Models
         public string RoomName { get; set; }
         public int Price { get; set; }
         public string ImageSource { get; set; }
+        public string ImageRoomSource { get; set; }
         public string LabelSource { get; set; }
         public string SoundSource { get; set; }
         public string RoomDescription { get; set; }
