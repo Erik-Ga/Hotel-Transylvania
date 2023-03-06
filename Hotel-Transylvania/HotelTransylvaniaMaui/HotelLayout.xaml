@@ -4,7 +4,7 @@
              x:Class="HotelTransylvaniaMaui.HotelLayout"
              xmlns:viewmodel="clr-namespace:HotelTransylvaniaMaui.ViewModels"
              x:DataType="viewmodel:HotelLayoutViewModel"
-             BackgroundImageSource="hotel.jpg"
+             BackgroundImageSource="hallway.gif"
              Title="HotelLayout">
     <ScrollView>
         <VerticalStackLayout>
