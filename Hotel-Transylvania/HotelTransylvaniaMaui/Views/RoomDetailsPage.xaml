@@ -28,6 +28,10 @@
                HorizontalOptions="Center"
                Style="{DynamicResource SubtitleStyle}"></Label>
 
+            <Entry 
+                x:Name="GuestName"
+                Placeholder="Namn"
+                Text="{Binding Guest}"/>
             <Button
             Text="Boka rum"
             Clicked="OnClickedBookRoom"

@@ -29,7 +29,7 @@
                 FontAttributes="Bold"
                 TextColor="DarkRed"
                 SemanticProperties.HeadingLevel="Level1"
-                FontSize="170"
+                FontSize="165"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="40"/>

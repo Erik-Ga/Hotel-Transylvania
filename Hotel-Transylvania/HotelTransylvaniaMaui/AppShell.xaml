@@ -9,9 +9,6 @@
     <FlyoutItem
         Title="Hotel Transylvania Main Page"
         Icon="zombiedoor.png">
-        <ShellContent
-        ContentTemplate="{DataTemplate local:MainPage}"
-        Route="MainPage">
-        </ShellContent>
+        <ShellContent ContentTemplate="{DataTemplate local:MainPage}"/>
     </FlyoutItem>
 </Shell>

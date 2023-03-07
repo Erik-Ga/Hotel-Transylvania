@@ -31,8 +31,7 @@ public partial class HotelLayout : ContentPage
     {
 
         var room = ((ListView)sender).SelectedItem as Models.Room;
-        int h = 0;
-        if (h == 0)
+        if (room.IsBooked == false)
         {
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(room.SoundSource));
             player.Play();
@@ -44,9 +43,11 @@ public partial class HotelLayout : ContentPage
                 await Navigation.PushAsync(page);
             }
         }
-        else
+        else if (room.IsBooked == true)
         {
-            await DisplayAlert("Tyvärr", "Rummet du valt är tyvärr bokat", "Ok");
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("scream.mp3"));
+            player.Play();
+            await DisplayAlert("This is a jump scare >:O", "Rummet du valt är tyvärr bokat :(", "Leave...");
         }
 
 

@@ -27,6 +27,8 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string imageRoomSource;
         [ObservableProperty]
+        string imageRoomDescription;
+        [ObservableProperty]
         string labelSource;
         [ObservableProperty]
         string soundSource;
@@ -34,6 +36,8 @@ namespace HotelTransylvaniaMaui.ViewModels
         string roomDescription;
         [ObservableProperty]
         bool isBooked;
+        [ObservableProperty]
+        string guest;
 
         // Skapande av lista för rum
         public HotelLayoutViewModel() 

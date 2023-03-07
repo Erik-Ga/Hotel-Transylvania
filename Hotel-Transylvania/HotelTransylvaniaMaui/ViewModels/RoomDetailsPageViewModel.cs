@@ -1,14 +1,19 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
-using CommunityToolkit.Mvvm.Input;
 using HotelTransylvaniaMaui.Models;
 using MongoDB.Driver;
+using System;
+using System.Collections.Generic;
 using System.Collections.ObjectModel;
+using System.Diagnostics;
+using System.Linq;
+using System.Runtime.CompilerServices;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace HotelTransylvaniaMaui.ViewModels
 {
-    internal partial class AdminPageViewModel : ObservableObject
+    internal partial class RoomDetailsPageViewModel : ObservableObject
     {
-        // Autogenererande kod
         [ObservableProperty]
         ObservableCollection<Models.Room> rooms;
         [ObservableProperty]
@@ -33,17 +38,9 @@ namespace HotelTransylvaniaMaui.ViewModels
         bool isBooked;
         [ObservableProperty]
         string guest;
-
-        // Skapande av lista för rum
-        public AdminPageViewModel()
+        public async void UpdateRoom()
         {
-            Rooms = new ObservableCollection<Models.Room>();
-        }
-
-        // Lägger till rum i MongoDb metod
-        [RelayCommand]
-        public async void AddRoom()
-        {
+            
             Room room = new Room()
             {
                 Id = Guid.NewGuid(),
@@ -60,28 +57,8 @@ namespace HotelTransylvaniaMaui.ViewModels
 
             };
 
-            await GetDbCollection().InsertOneAsync(room);
-
-            Rooms.Add(room);
+            await GetDbCollection().FindOneAndUpdate(room.Id, Guest);
         }
-
-        // Tar bort rum i MongoDb metod
-        [RelayCommand]
-        public async void DeleteRoom(object r)
-        {
-            var room = (Room)r;
-            await GetDbCollection().DeleteOneAsync(x => x.Id == room.Id);
-            Rooms.Remove(room);
-        }
-
-        // Hämtar alla rum i MongoDb metod
-        public async Task GetRooms()
-        {
-            List<Room> roomsFromDb = await GetDbCollection().AsQueryable().ToListAsync();
-            roomsFromDb.ForEach(x => Rooms.Add(x));
-        }
-
-        // Data för att kommunicera med MongoDb
         public IMongoCollection<Models.Room> GetDbCollection()
         {
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://Erik:Pumpa123@cluster0.kh2vogk.mongodb.net/?retryWrites=true&w=majority");
