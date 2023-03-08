@@ -5,6 +5,7 @@ public partial class RoomDetailsPage : ContentPage
 	public RoomDetailsPage()
 	{
 		InitializeComponent();
+        BindingContext = new ViewModels.RoomDetailsPageViewModel();
 	}
     private void OnBackClicked(object sender, EventArgs e)
     {

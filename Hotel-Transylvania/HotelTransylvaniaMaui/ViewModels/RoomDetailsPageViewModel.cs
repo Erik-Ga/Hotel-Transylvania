@@ -1,5 +1,8 @@
 ﻿using CommunityToolkit.Mvvm.ComponentModel;
+using CommunityToolkit.Mvvm.Input;
 using HotelTransylvaniaMaui.Models;
+using HotelTransylvaniaMaui.Views;
+using Microsoft.VisualBasic;
 using MongoDB.Driver;
 using System;
 using System.Collections.Generic;
@@ -38,26 +41,14 @@ namespace HotelTransylvaniaMaui.ViewModels
         bool isBooked;
         [ObservableProperty]
         string guest;
-        public async void UpdateRoom()
+
+        [RelayCommand]
+        public async void UpdateRoom(object r)
         {
-            
-            Room room = new Room()
-            {
-                Id = Guid.NewGuid(),
-                RoomName = RoomName,
-                Price = Price,
-                ImageSource = ImageSource,
-                ImageRoomSource = ImageRoomSource,
-                ImageRoomDescription = ImageRoomDescription,
-                LabelSource = LabelSource,
-                SoundSource = SoundSource,
-                RoomDescription = RoomDescription,
-                IsBooked = IsBooked,
-                Guest = Guest
-
-            };
-
-            await GetDbCollection().FindOneAndUpdate(room.Id, Guest);
+            var room = (Room)r;
+            var filter = Builders<Room>.Filter.Eq(i => i.Id, room.Id);
+            var update = Builders<Room>.Update.Set(g => g.Guest, "Emma");
+            await GetDbCollection().UpdateOneAsync(filter, update);
         }
         public IMongoCollection<Models.Room> GetDbCollection()
         {
