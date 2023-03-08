@@ -8,7 +8,11 @@
              Title="{Binding RoomName}">
     <ScrollView>
         <VerticalStackLayout>
-        <Label 
+            <Label
+                x:Name="DoorImage"
+                Text="{Binding ImageSourceBooked}"
+                IsVisible="False"/>
+            <Label 
                x:Name="LabelRoomName"
                Text="{Binding RoomName}"
                FontFamily="Chiller"
@@ -16,30 +20,30 @@
                FontSize="60"
               HorizontalOptions="Center"
               Style="{DynamicResource TitleStyle}"></Label>
-        <Label Text="{Binding Price, StringFormat='{0} kronor'}"
+            <Label Text="{Binding Price, StringFormat='{0} kronor'}"
                TextColor="DarkRed"
                FontAttributes="Bold"
                FontFamily="Chiller"
                FontSize="45"
                HorizontalOptions="Center"></Label>
-        <Image Source="{Binding ImageRoomDescription}"
+            <Image Source="{Binding ImageRoomDescription}"
                HeightRequest="400"
                HorizontalOptions="Center"></Image>
-        <Label Text="{Binding RoomDescription}"
+            <Label Text="{Binding RoomDescription}"
                FontAttributes="Bold"
                FontFamily="Chiller"
                FontSize="40"
                HorizontalOptions="Center"
                Style="{DynamicResource SubtitleStyle}"></Label>
 
-        <Entry 
+            <Entry 
             x:Name="GuestEntry"
             Placeholder="Skriv ditt namn"
             TextColor="DarkRed"
             BackgroundColor="Black"
             WidthRequest="300"
             Text="{Binding Guest}"/>
-        <Button
+            <Button
             Text="Boka rum"
             Clicked="OnClickedBookRoom"
             TextColor="DarkRed"

@@ -28,6 +28,10 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string imageSource;
         [ObservableProperty]
+        string imageSourceBooked;
+        [ObservableProperty]
+        string imageSourceNotBooked;
+        [ObservableProperty]
         string imageRoomSource;
         [ObservableProperty]
         string imageRoomDescription;
@@ -42,13 +46,15 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string guest;
 
-        public static async void UpdateRoom(object r, object g)
+        public static async void UpdateRoom(object r, object g, object i)
         {
             var filter = Builders<Room>.Filter.Eq(i => i.RoomName, r);
             var update = Builders<Room>.Update.Set(g => g.Guest, g);
             var update2 = Builders<Room>.Update.Set(g => g.IsBooked, true);
+            var update3 = Builders<Room>.Update.Set(g => g.ImageSource, i);
             await GetDbCollection().UpdateOneAsync(filter, update);
             await GetDbCollection().UpdateOneAsync(filter, update2);
+            await GetDbCollection().UpdateOneAsync(filter, update3);
         }
         public static IMongoCollection<Models.Room> GetDbCollection()
         {

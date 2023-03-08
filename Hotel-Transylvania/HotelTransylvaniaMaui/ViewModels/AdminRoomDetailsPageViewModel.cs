@@ -23,6 +23,10 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string imageSource;
         [ObservableProperty]
+        string imageSourceBooked;
+        [ObservableProperty]
+        string imageSourceNotBooked;
+        [ObservableProperty]
         string imageRoomSource;
         [ObservableProperty]
         string imageRoomDescription;

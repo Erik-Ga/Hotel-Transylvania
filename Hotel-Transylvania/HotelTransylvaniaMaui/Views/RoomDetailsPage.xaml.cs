@@ -17,6 +17,7 @@ public partial class RoomDetailsPage : ContentPage
     {
         var guest = GuestEntry.Text;
         var roomName = LabelRoomName.Text;
-        ViewModels.RoomDetailsPageViewModel.UpdateRoom(roomName, guest);
+        var roomDoorImage = DoorImage.Text;
+        ViewModels.RoomDetailsPageViewModel.UpdateRoom(roomName, guest, roomDoorImage);
     }
 }
