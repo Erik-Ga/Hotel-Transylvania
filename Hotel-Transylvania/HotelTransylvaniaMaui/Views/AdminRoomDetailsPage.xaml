@@ -11,21 +11,26 @@
             <Label 
                x:Name="LabelRoomName"
                Text="{Binding RoomName}"
+               TextColor="LawnGreen"
                FontFamily="Chiller"
                FontAttributes="Bold"
                FontSize="60"
               HorizontalOptions="Center"
               Style="{DynamicResource TitleStyle}"></Label>
-            <Label Text="{Binding Price, StringFormat='{0} kronor'}"
-               TextColor="DarkRed"
+            <Label 
+               Text="{Binding Price, StringFormat='{0} kronor'}"
+               TextColor="LawnGreen"
                FontAttributes="Bold"
                FontFamily="Chiller"
                FontSize="45"
                HorizontalOptions="Center"></Label>
-            <Image Source="{Binding ImageSource}"
+            <Image 
+               Source="{Binding ImageRoomDescription}"
                HeightRequest="400"
                HorizontalOptions="Center"></Image>
-            <Label Text="{Binding RoomDescription}"
+            <Label 
+               Text="{Binding RoomDescription}"
+               TextColor="LawnGreen"
                FontAttributes="Bold"
                FontFamily="Chiller"
                FontSize="40"
@@ -35,6 +40,7 @@
             <Label 
                 x:Name="LabelId"
                 Text="{Binding Id}"
+                TextColor="LawnGreen"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
                 FontSize="20"
@@ -42,58 +48,70 @@
             <Entry 
                 x:Name="EntryRumnamn"
                 Placeholder="Rumnamn"
-                Text="{Binding RoomName}"/>
+                Text="{Binding RoomName}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryPris"
                 Placeholder="Pris"
-                Text="{Binding Price}"/>
+                Text="{Binding Price}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryBild"
                 Placeholder="Bild"
-                Text="{Binding ImageSource}"/>
+                Text="{Binding ImageSource}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryRumBild"
                 Placeholder="Rum Bild"
-                Text="{Binding ImageRoomSource}"/>
+                Text="{Binding ImageRoomSource}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryRumBeskrivningsbild"
                 Placeholder="Rum Beskrivningsbild"
-                Text="{Binding ImageRoomDescription}"/>
+                Text="{Binding ImageRoomDescription}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryTitelBild"
                 Placeholder="Titel Bild"
-                Text="{Binding LabelSource}"/>
+                Text="{Binding LabelSource}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryLjud"
                 Placeholder="Ljud"
-                Text="{Binding SoundSource}"/>
+                Text="{Binding SoundSource}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryDetaljer"
                 Placeholder="Detaljer"
-                Text="{Binding RoomDescription}"/>
+                Text="{Binding RoomDescription}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryBokad"
                 Placeholder="Bokad"
-                Text="{Binding IsBooked}"/>
+                Text="{Binding IsBooked}"
+                TextColor="LawnGreen"/>
             <Entry 
                 x:Name="EntryGäst"
                 Placeholder="Gäst"
-                Text="{Binding Guest}"/>
+                Text="{Binding Guest}"
+                TextColor="LawnGreen"/>
             <Button
-            Text="Uppdatera rum"
-            Clicked="OnClickedUpdateRoom"
-            FontFamily="Chiller"
-            FontAttributes="Bold"
-            FontSize="30"
-            HorizontalOptions="Center"></Button>
+                Text="Uppdatera rum"
+                TextColor="LawnGreen"
+                Clicked="OnClickedUpdateRoom"
+                FontFamily="Chiller"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"></Button>
 
             <Button
-            Text="Tillbaka till lobbyn"
-            Clicked="OnBackClicked"
-            FontFamily="Chiller"
-            FontAttributes="Bold"
-            FontSize="30"
-            HorizontalOptions="Center"></Button>
+                Text="Tillbaka till lobbyn"
+                TextColor="LawnGreen"
+                Clicked="OnBackClicked"
+                FontFamily="Chiller"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"></Button>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

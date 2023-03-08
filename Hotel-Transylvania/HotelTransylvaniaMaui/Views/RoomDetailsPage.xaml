@@ -22,7 +22,7 @@
                FontFamily="Chiller"
                FontSize="45"
                HorizontalOptions="Center"></Label>
-        <Image Source="{Binding ImageSource}"
+        <Image Source="{Binding ImageRoomDescription}"
                HeightRequest="400"
                HorizontalOptions="Center"></Image>
         <Label Text="{Binding RoomDescription}"
@@ -33,12 +33,17 @@
                Style="{DynamicResource SubtitleStyle}"></Label>
 
         <Entry 
-                x:Name="GuestEntry"
-                Placeholder="Namn"
-                Text="{Binding Guest}"/>
+            x:Name="GuestEntry"
+            Placeholder="Skriv ditt namn"
+            TextColor="DarkRed"
+            BackgroundColor="Black"
+            WidthRequest="300"
+            Text="{Binding Guest}"/>
         <Button
             Text="Boka rum"
             Clicked="OnClickedBookRoom"
+            TextColor="DarkRed"
+            BackgroundColor="Black"
             FontFamily="Chiller"
             FontAttributes="Bold"
             FontSize="30"
@@ -46,6 +51,8 @@
 
             <Button
             Text="Tillbaka till lobbyn"
+            TextColor="DarkRed"
+            BackgroundColor="Black"
             Clicked="OnBackClicked"
             FontFamily="Chiller"
             FontAttributes="Bold"

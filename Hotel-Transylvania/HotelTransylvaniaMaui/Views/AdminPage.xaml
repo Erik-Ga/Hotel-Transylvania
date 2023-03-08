@@ -4,24 +4,33 @@
              x:Class="HotelTransylvaniaMaui.Views.AdminPage"
              xmlns:viewmodel="clr-namespace:HotelTransylvaniaMaui.ViewModels"
              x:DataType="viewmodel:AdminPageViewModel"
-             Title="AdminPage">
+             BackgroundImageSource="admin1.gif"
+             Title="Admin Page">
     <ScrollView>
         <VerticalStackLayout>
             <Entry Placeholder="Rumnamn"
-                   Text="{Binding RoomName}"/>
+                   Text="{Binding RoomName}"
+                   TextColor="LawnGreen"/>
             <Entry Placeholder="Pris"
+                   TextColor="LawnGreen"
                    Text="{Binding Price}"/>
             <Entry Placeholder="Bild"
+                   TextColor="LawnGreen"
                    Text="{Binding ImageSource}"/>
             <Entry Placeholder="Rum Bild"
+                   TextColor="LawnGreen"
                    Text="{Binding ImageRoomSource}"/>
             <Entry Placeholder="Rum Beskrivningsbild"
+                   TextColor="LawnGreen"
                    Text="{Binding ImageRoomDescription}"/>
             <Entry Placeholder="Titel Bild"
+                   TextColor="LawnGreen"
                    Text="{Binding LabelSource}"/>
             <Entry Placeholder="Ljud"
+                   TextColor="LawnGreen"
                    Text="{Binding SoundSource}"/>
             <Entry Placeholder="Detaljer"
+                   TextColor="LawnGreen"
                    Text="{Binding RoomDescription}"/>
             <Entry Placeholder="Bokad"
                    Text="{Binding IsBooked}"/>
@@ -30,7 +39,12 @@
 
             <Button
                 Command="{Binding AddRoomCommand}"
-                Text="Lägg till rum"                
+                Text="Lägg till rum" 
+                TextColor="LawnGreen"
+                BackgroundColor="DarkSlateGray"
+                FontFamily="Chiller"
+                FontAttributes="Bold"
+                FontSize="35"
                 HorizontalOptions="Center" />
 
             <ListView
@@ -40,28 +54,61 @@
                     <DataTemplate>
                         <ViewCell>
                             <Grid Padding="10"
-                              RowDefinitions="Auto, *"
-                              ColumnDefinitions="200, *"
-                              ColumnSpacing="20">
-                                <Image Grid.RowSpan="2"
+                              RowDefinitions="100, 120, 100, 100, 100"
+                              ColumnDefinitions="500, *"
+                              ColumnSpacing="5">
+                                <Image 
+                                   MaximumWidthRequest="300"
+                                   Grid.Row="1"
+                                   Grid.RowSpan="5"
                                    Source="{Binding ImageSource}"
                                    Aspect="Fill"
-                                   HeightRequest="200"/>
-                                <Label Grid.Column="1"
+                                   HeightRequest="400"/>
+                                <Image
+                                   Grid.Row="0"
+                                   Grid.Column="0"
+                                   Source="{Binding LabelSource}"
+                                   Aspect="Fill"/>
+                                <Label                                    
+                                   Grid.Column="0"
                                    Text="{Binding RoomName}"
-                                   FontSize="32"/>
-                                <Label Grid.Row="1"
+                                   TextColor="LawnGreen"
+                                   HorizontalOptions="Center"
+                                   VerticalOptions="Center"
+                                   FontFamily="Chiller"
+                                   FontAttributes="Bold"
+                                   FontSize="60"/>
+                                <Label 
+                                   VerticalOptions="Center"
+                                   Margin="5"
+                                   Grid.Row="1"
                                    Grid.Column="1"
                                    Text="{Binding Price, StringFormat='{0} kr'}"
-                                   FontSize="15"/>
-                                <Label Grid.Row="1"
-                                   Grid.Column="2"
+                                   TextColor="LawnGreen"
+                                   FontFamily="Chiller"
+                                   FontAttributes="Bold"
+                                   FontSize="50"/>
+                                <Label 
+                                   Grid.Row="2"
+                                   Grid.Column="1"
                                    Text="{Binding RoomDescription}"
-                                   FontSize="32"/>
-                                <Button Grid.Column="2" Text="Radera"
+                                   TextColor="LawnGreen"
+                                   FontFamily="Chiller"
+                                   FontAttributes="Bold"
+                                   FontSize="50"/>
+                                <Button 
+                                   Grid.Row="2"
+                                   Grid.Column="2" 
+                                   Text="Radera"
+                                   TextColor="LawnGreen"
+                                   BackgroundColor="DarkSlateGray"
+                                   FontFamily="Chiller"
+                                   FontAttributes="Bold"
+                                   FontSize="70"
                                    Margin="20"
                                    Padding="10"
-                                   WidthRequest="100"
+                                   WidthRequest="300"
+                                   HeightRequest="200"
                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminPageViewModel}}, Path=DeleteRoomCommand}"
                                    CommandParameter="{Binding .}"/>
                             </Grid>
