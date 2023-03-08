@@ -65,6 +65,16 @@ namespace HotelTransylvaniaMaui.ViewModels
             await GetDbCollection().UpdateOneAsync(filter, update9);
             await GetDbCollection().UpdateOneAsync(filter, update10);
         }
+        public static async void CancelRoom(Guid id, string d, string g)
+        {
+            var filter = Builders<Room>.Filter.Eq(x => x.Id, id);
+            var update = Builders<Room>.Update.Set(x => x.ImageSource, d);
+            var update2 = Builders<Room>.Update.Set(x => x.Guest, g);
+            var update3 = Builders<Room>.Update.Set(x => x.IsBooked, false);
+            await GetDbCollection().UpdateOneAsync(filter, update);
+            await GetDbCollection().UpdateOneAsync(filter, update2);
+            await GetDbCollection().UpdateOneAsync(filter, update3);
+        }
 
         public static IMongoCollection<Models.Room> GetDbCollection()
         {

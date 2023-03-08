@@ -26,4 +26,12 @@ public partial class AdminRoomDetailsPage : ContentPage
         var guest = EntryGäst.Text;
         ViewModels.AdminRoomDetailsPageViewModel.UpdateRoom(id, roomName, price, image, roomImage, roomDescriptionImage, titelImage, sound, details, booked, guest);
     }
+    private void OnClickedCancelRoom(object sender, EventArgs e)
+    {
+        Guid id = Guid.Parse(LabelId.Text);
+        string roomDoorImage = DoorImage.Text;
+        string guest = null;
+        ViewModels.AdminRoomDetailsPageViewModel.CancelRoom(id, roomDoorImage, guest);
+
+    }
 }

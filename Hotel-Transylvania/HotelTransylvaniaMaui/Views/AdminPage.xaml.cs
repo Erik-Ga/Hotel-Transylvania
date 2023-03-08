@@ -39,12 +39,4 @@ public partial class AdminPage : ContentPage
             await Navigation.PushAsync(page);
         }
     }
-    private void OnClickedCancelRoom(object sender, EventArgs e)
-    {
-        var roomName = LabelRoomName.Text;
-        var roomDoorImage = DoorImage.Source;
-        string guest = null;
-        ViewModels.AdminPageViewModel.CancelRoom(roomName, roomDoorImage, guest);
-
-    }
 }

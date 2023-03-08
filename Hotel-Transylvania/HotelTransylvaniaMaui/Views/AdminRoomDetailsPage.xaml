@@ -8,6 +8,9 @@
              Title="{Binding RoomName}">
     <ScrollView>
         <VerticalStackLayout>
+            <Label x:Name="DoorImage"
+                   Text="{Binding ImageSourceNotBooked}"
+                   IsVisible="False"/>
             <Label 
                x:Name="LabelRoomName"
                Text="{Binding RoomName}"
@@ -103,6 +106,15 @@
                 FontAttributes="Bold"
                 FontSize="30"
                 HorizontalOptions="Center"></Button>
+            <Button 
+                Text="Avboka rum"
+                TextColor="LawnGreen"
+                Clicked="OnClickedCancelRoom"
+                FontFamily="Chiller"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"></Button>
+
 
             <Button
                 Text="Tillbaka till lobbyn"

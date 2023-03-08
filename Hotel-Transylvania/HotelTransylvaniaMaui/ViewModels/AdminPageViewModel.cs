@@ -70,16 +70,6 @@ namespace HotelTransylvaniaMaui.ViewModels
 
             Rooms.Add(room);
         }
-        public static async void CancelRoom(object r, object d, object g)
-        {
-            var filter = Builders<Room>.Filter.Eq(i => i.RoomName, r);
-            var update = Builders<Room>.Update.Set(g => g.ImageSource, d);
-            var update2 = Builders<Room>.Update.Set(g => g.Guest, g);
-            var update3 = Builders<Room>.Update.Set(g => g.IsBooked, false);
-            await GetDbCollection().UpdateOneAsync(filter, update);
-            await GetDbCollection().UpdateOneAsync(filter, update2);
-            await GetDbCollection().UpdateOneAsync(filter, update3);
-        }
 
         // Tar bort rum i MongoDb metod
         [RelayCommand]

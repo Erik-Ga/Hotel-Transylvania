@@ -8,14 +8,6 @@
              Title="Admin Page">
     <ScrollView>
         <VerticalStackLayout>
-            <Image 
-                   x:Name="DoorImage"
-                   Source="{Binding ImageSourceNotBooked}"
-                   IsVisible="False"/>
-            <Label 
-                   x:Name="LabelRoomName"
-                   Text="{Binding RoomName}"
-                   IsVisible="False"/>
             <Entry Placeholder="Rumnamn"
                    Text="{Binding RoomName}"
                    TextColor="LawnGreen"/>
@@ -121,21 +113,6 @@
                                    HeightRequest="200"
                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminPageViewModel}}, Path=DeleteRoomCommand}"
                                    CommandParameter="{Binding .}"/>
-                                <Button 
-                                   Grid.Row="2"
-                                   Grid.Column="3" 
-                                   Clicked="OnClickedCancelRoom"
-                                   Text="Avboka"
-                                   TextColor="LawnGreen"
-                                   BackgroundColor="DarkSlateGray"
-                                   FontFamily="Chiller"
-                                   FontAttributes="Bold"
-                                   FontSize="70"
-                                   Margin="20"
-                                   Padding="10"
-                                   WidthRequest="300"
-                                   HeightRequest="200"
-/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
