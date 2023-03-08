@@ -39,4 +39,8 @@ public partial class AdminPage : ContentPage
             await Navigation.PushAsync(page);
         }
     }
+    private void OnClickedCancel(object sender, EventArgs e)
+    {
+
+    }
 }

@@ -55,7 +55,7 @@
                         <ViewCell>
                             <Grid Padding="10"
                               RowDefinitions="100, 120, 100, 100, 100"
-                              ColumnDefinitions="500, *"
+                              ColumnDefinitions="500, 300, 300, 300"
                               ColumnSpacing="5">
                                 <Image 
                                    MaximumWidthRequest="300"
@@ -111,6 +111,21 @@
                                    HeightRequest="200"
                                    Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminPageViewModel}}, Path=DeleteRoomCommand}"
                                    CommandParameter="{Binding .}"/>
+                                <Button 
+                                   Grid.Row="2"
+                                   Grid.Column="3" 
+                                   Clicked="OnClickedCancel"
+                                   Text="Avboka"
+                                   TextColor="LawnGreen"
+                                   BackgroundColor="DarkSlateGray"
+                                   FontFamily="Chiller"
+                                   FontAttributes="Bold"
+                                   FontSize="70"
+                                   Margin="20"
+                                   Padding="10"
+                                   WidthRequest="300"
+                                   HeightRequest="200"
+/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>
