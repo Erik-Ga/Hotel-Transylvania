@@ -8,6 +8,14 @@
              Title="Admin Page">
     <ScrollView>
         <VerticalStackLayout>
+            <Image 
+                   x:Name="DoorImage"
+                   Source="{Binding ImageSourceNotBooked}"
+                   IsVisible="False"/>
+            <Label 
+                   x:Name="LabelRoomName"
+                   Text="{Binding RoomName}"
+                   IsVisible="False"/>
             <Entry Placeholder="Rumnamn"
                    Text="{Binding RoomName}"
                    TextColor="LawnGreen"/>
@@ -46,6 +54,7 @@
                 FontAttributes="Bold"
                 FontSize="35"
                 HorizontalOptions="Center" />
+            
 
             <ListView
             ItemsSource="{Binding Rooms}"
@@ -57,6 +66,7 @@
                               RowDefinitions="100, 120, 100, 100, 100"
                               ColumnDefinitions="500, 300, 300, 300"
                               ColumnSpacing="5">
+
                                 <Image 
                                    MaximumWidthRequest="300"
                                    Grid.Row="1"
@@ -69,7 +79,7 @@
                                    Grid.Column="0"
                                    Source="{Binding LabelSource}"
                                    Aspect="Fill"/>
-                                <Label                                    
+                                <Label  
                                    Grid.Column="0"
                                    Text="{Binding RoomName}"
                                    TextColor="LawnGreen"
@@ -114,7 +124,7 @@
                                 <Button 
                                    Grid.Row="2"
                                    Grid.Column="3" 
-                                   Clicked="OnClickedCancel"
+                                   Clicked="OnClickedCancelRoom"
                                    Text="Avboka"
                                    TextColor="LawnGreen"
                                    BackgroundColor="DarkSlateGray"
