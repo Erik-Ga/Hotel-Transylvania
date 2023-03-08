@@ -32,6 +32,7 @@ public partial class AdminRoomDetailsPage : ContentPage
         string roomDoorImage = DoorImage.Text;
         string guest = null;
         ViewModels.AdminRoomDetailsPageViewModel.CancelRoom(id, roomDoorImage, guest);
+        DisplayAlert("Avbokning lyckad!", "Rummet är städat och rensat på guck och redo för nästa gäst!", "Woop Woop!");
 
     }
 }

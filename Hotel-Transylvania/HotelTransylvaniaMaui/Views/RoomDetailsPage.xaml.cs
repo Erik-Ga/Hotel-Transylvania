@@ -19,5 +19,6 @@ public partial class RoomDetailsPage : ContentPage
         var roomName = LabelRoomName.Text;
         var roomDoorImage = DoorImage.Text;
         ViewModels.RoomDetailsPageViewModel.UpdateRoom(roomName, guest, roomDoorImage);
+        DisplayAlert("Välkommen!", "Bokningen lyckades! :)", "Yay!");
     }
 }

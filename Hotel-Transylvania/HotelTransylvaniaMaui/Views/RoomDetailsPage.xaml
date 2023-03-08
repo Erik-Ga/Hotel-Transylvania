@@ -9,7 +9,7 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label
-                HeightRequest="75"/>
+                HeightRequest="60"/>
             <Label
                 x:Name="DoorImage"
                 Text="{Binding ImageSourceBooked}"

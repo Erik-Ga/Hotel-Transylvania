@@ -12,14 +12,14 @@
                    Text="{Binding ImageSourceNotBooked}"
                    IsVisible="False"/>
             <Label
-                HeightRequest="75"/>
+                HeightRequest="60"/>
             <Label 
                x:Name="LabelRoomName"
                Text="{Binding RoomName}"
                TextColor="LawnGreen"
                FontFamily="Chiller"
                FontAttributes="Bold"
-               FontSize="60"
+               FontSize="100"
               HorizontalOptions="Center"
               Style="{DynamicResource TitleStyle}"></Label>
             <Label 
@@ -27,18 +27,18 @@
                TextColor="LawnGreen"
                FontAttributes="Bold"
                FontFamily="Chiller"
-               FontSize="45"
+               FontSize="50"
                HorizontalOptions="Center"></Label>
             <Image 
                Source="{Binding ImageRoomDescription}"
-               HeightRequest="400"
+               HeightRequest="200"
                HorizontalOptions="Center"></Image>
             <Label 
                Text="{Binding RoomDescription}"
-               TextColor="LawnGreen"
+               TextColor="White"
                FontAttributes="Bold"
                FontFamily="Chiller"
-               FontSize="40"
+               FontSize="80"
                HorizontalOptions="Center"
                Style="{DynamicResource SubtitleStyle}"></Label>
 
@@ -103,6 +103,7 @@
             <Button
                 Text="Uppdatera rum"
                 TextColor="LawnGreen"
+                BackgroundColor="Black"
                 Clicked="OnClickedUpdateRoom"
                 FontFamily="Chiller"
                 FontAttributes="Bold"
@@ -111,6 +112,7 @@
             <Button 
                 Text="Avboka rum"
                 TextColor="LawnGreen"
+                BackgroundColor="Black"
                 Clicked="OnClickedCancelRoom"
                 FontFamily="Chiller"
                 FontAttributes="Bold"
@@ -121,6 +123,7 @@
             <Button
                 Text="Tillbaka till lobbyn"
                 TextColor="LawnGreen"
+                BackgroundColor="Black"
                 Clicked="OnBackClicked"
                 FontFamily="Chiller"
                 FontAttributes="Bold"
