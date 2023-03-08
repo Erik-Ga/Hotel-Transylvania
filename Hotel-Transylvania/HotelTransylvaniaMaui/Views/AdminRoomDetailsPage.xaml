@@ -11,6 +11,8 @@
             <Label x:Name="DoorImage"
                    Text="{Binding ImageSourceNotBooked}"
                    IsVisible="False"/>
+            <Label
+                HeightRequest="75"/>
             <Label 
                x:Name="LabelRoomName"
                Text="{Binding RoomName}"
