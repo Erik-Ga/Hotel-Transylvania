@@ -9,6 +9,8 @@
     <ScrollView>
         <VerticalStackLayout>
             <Label
+                HeightRequest="75"/>
+            <Label
                 x:Name="DoorImage"
                 Text="{Binding ImageSourceBooked}"
                 IsVisible="False"/>
@@ -17,22 +19,24 @@
                Text="{Binding RoomName}"
                FontFamily="Chiller"
                FontAttributes="Bold"
-               FontSize="60"
+               FontSize="100"
               HorizontalOptions="Center"
               Style="{DynamicResource TitleStyle}"></Label>
             <Label Text="{Binding Price, StringFormat='{0} kronor'}"
                TextColor="DarkRed"
                FontAttributes="Bold"
                FontFamily="Chiller"
-               FontSize="45"
+               FontSize="50"
                HorizontalOptions="Center"></Label>
             <Image Source="{Binding ImageRoomDescription}"
-               HeightRequest="400"
+               HeightRequest="200"
                HorizontalOptions="Center"></Image>
-            <Label Text="{Binding RoomDescription}"
+            <Label 
+               Text="{Binding RoomDescription}"
+               TextColor="White"
                FontAttributes="Bold"
-               FontFamily="Chiller"
-               FontSize="40"
+               FontFamily="Chiller"               
+               FontSize="80"
                HorizontalOptions="Center"
                Style="{DynamicResource SubtitleStyle}"></Label>
 
