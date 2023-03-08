@@ -15,6 +15,8 @@
                    Text="{Binding ImageSource}"/>
             <Entry Placeholder="Rum Bild"
                    Text="{Binding ImageRoomSource}"/>
+            <Entry Placeholder="Rum Beskrivningsbild"
+                   Text="{Binding ImageRoomDescription}"/>
             <Entry Placeholder="Titel Bild"
                    Text="{Binding LabelSource}"/>
             <Entry Placeholder="Ljud"
@@ -23,6 +25,8 @@
                    Text="{Binding RoomDescription}"/>
             <Entry Placeholder="Bokad"
                    Text="{Binding IsBooked}"/>
+            <Entry Placeholder="Gäst"
+                   Text="{Binding Guest}"/>
 
             <Button
                 Command="{Binding AddRoomCommand}"
@@ -55,11 +59,11 @@
                                    Text="{Binding RoomDescription}"
                                    FontSize="32"/>
                                 <Button Grid.Column="2" Text="Radera"
-                                        Margin="20"
-                                        Padding="10"
-                                        WidthRequest="100"
-                                        Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminPageViewModel}}, Path=DeleteRoomCommand}"
-                                        CommandParameter="{Binding .}"/>
+                                   Margin="20"
+                                   Padding="10"
+                                   WidthRequest="100"
+                                   Command="{Binding Source={RelativeSource AncestorType={x:Type viewmodel:AdminPageViewModel}}, Path=DeleteRoomCommand}"
+                                   CommandParameter="{Binding .}"/>
                             </Grid>
                         </ViewCell>
                     </DataTemplate>

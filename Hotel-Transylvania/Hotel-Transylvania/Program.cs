@@ -8,8 +8,12 @@ namespace Hotel_Transylvania
         static async Task Main(string[] args)
         {
             // await MethodAPI.GetWeather();
-            Task saveGuest = Models.MongoDB.MongoDBSave();
-            await saveGuest;
+            //Task saveguesttest = Models.MongoDBTest.AddGuest();
+            //await saveguesttest;
+            Task updateroom = Models.MongoDBTest.UpdateRoom();
+            await updateroom;
+            //Task saveGuest = Models.MongoDB.MongoDBSave();
+            //await saveGuest;
         }
     }
 }

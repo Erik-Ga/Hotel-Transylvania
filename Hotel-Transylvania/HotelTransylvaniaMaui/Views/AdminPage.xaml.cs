@@ -31,15 +31,12 @@ public partial class AdminPage : ContentPage
 
         var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync(room.SoundSource));
         player.Play();
-        await Task.Delay(1000);
-        player.Dispose();
 
         if (room != null)
         {
-            var page = new RoomDetailsPage();
+            var page = new AdminRoomDetailsPage();
             page.BindingContext = room;
             await Navigation.PushAsync(page);
         }
     }
-
 }

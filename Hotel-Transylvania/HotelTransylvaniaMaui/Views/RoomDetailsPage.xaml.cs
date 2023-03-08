@@ -1,3 +1,5 @@
+using HotelTransylvaniaMaui.Models;
+
 namespace HotelTransylvaniaMaui.Views;
 
 public partial class RoomDetailsPage : ContentPage
@@ -13,6 +15,8 @@ public partial class RoomDetailsPage : ContentPage
     }
     private void OnClickedBookRoom(object sender, EventArgs e)
     {
-        
+        var guest = GuestEntry.Text;
+        var roomName = LabelRoomName.Text;
+        ViewModels.RoomDetailsPageViewModel.UpdateRoom(roomName, guest);
     }
 }

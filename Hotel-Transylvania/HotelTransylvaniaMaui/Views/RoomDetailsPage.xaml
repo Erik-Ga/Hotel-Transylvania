@@ -8,7 +8,9 @@
              Title="{Binding RoomName}">
     <ScrollView>
         <VerticalStackLayout>
-        <Label Text="{Binding RoomName}"
+        <Label 
+               x:Name="LabelRoomName"
+               Text="{Binding RoomName}"
                FontFamily="Chiller"
                FontAttributes="Bold"
                FontSize="60"
@@ -31,12 +33,12 @@
                Style="{DynamicResource SubtitleStyle}"></Label>
 
         <Entry 
-                x:Name="GuestName"
+                x:Name="GuestEntry"
                 Placeholder="Namn"
                 Text="{Binding Guest}"/>
         <Button
             Text="Boka rum"
-            Command="{Binding UpdateRoomCommand}"
+            Clicked="OnClickedBookRoom"
             FontFamily="Chiller"
             FontAttributes="Bold"
             FontSize="30"

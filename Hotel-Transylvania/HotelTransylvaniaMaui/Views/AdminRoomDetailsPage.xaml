@@ -1,0 +1,99 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="HotelTransylvaniaMaui.Views.AdminRoomDetailsPage"
+             xmlns:viewmodel="clr-namespace:HotelTransylvaniaMaui.ViewModels"
+             x:DataType="viewmodel:AdminRoomDetailsPageViewModel"
+             BackgroundImageSource="{Binding ImageRoomSource}"
+             Title="{Binding RoomName}">
+    <ScrollView>
+        <VerticalStackLayout>
+            <Label 
+               x:Name="LabelRoomName"
+               Text="{Binding RoomName}"
+               FontFamily="Chiller"
+               FontAttributes="Bold"
+               FontSize="60"
+              HorizontalOptions="Center"
+              Style="{DynamicResource TitleStyle}"></Label>
+            <Label Text="{Binding Price, StringFormat='{0} kronor'}"
+               TextColor="DarkRed"
+               FontAttributes="Bold"
+               FontFamily="Chiller"
+               FontSize="45"
+               HorizontalOptions="Center"></Label>
+            <Image Source="{Binding ImageSource}"
+               HeightRequest="400"
+               HorizontalOptions="Center"></Image>
+            <Label Text="{Binding RoomDescription}"
+               FontAttributes="Bold"
+               FontFamily="Chiller"
+               FontSize="40"
+               HorizontalOptions="Center"
+               Style="{DynamicResource SubtitleStyle}"></Label>
+
+            <Label 
+                x:Name="LabelId"
+                Text="{Binding Id}"
+                FontAttributes="Bold"
+                FontFamily="Chiller"
+                FontSize="20"
+                HorizontalOptions="Center"/>
+            <Entry 
+                x:Name="EntryRumnamn"
+                Placeholder="Rumnamn"
+                Text="{Binding RoomName}"/>
+            <Entry 
+                x:Name="EntryPris"
+                Placeholder="Pris"
+                Text="{Binding Price}"/>
+            <Entry 
+                x:Name="EntryBild"
+                Placeholder="Bild"
+                Text="{Binding ImageSource}"/>
+            <Entry 
+                x:Name="EntryRumBild"
+                Placeholder="Rum Bild"
+                Text="{Binding ImageRoomSource}"/>
+            <Entry 
+                x:Name="EntryRumBeskrivningsbild"
+                Placeholder="Rum Beskrivningsbild"
+                Text="{Binding ImageRoomDescription}"/>
+            <Entry 
+                x:Name="EntryTitelBild"
+                Placeholder="Titel Bild"
+                Text="{Binding LabelSource}"/>
+            <Entry 
+                x:Name="EntryLjud"
+                Placeholder="Ljud"
+                Text="{Binding SoundSource}"/>
+            <Entry 
+                x:Name="EntryDetaljer"
+                Placeholder="Detaljer"
+                Text="{Binding RoomDescription}"/>
+            <Entry 
+                x:Name="EntryBokad"
+                Placeholder="Bokad"
+                Text="{Binding IsBooked}"/>
+            <Entry 
+                x:Name="EntryGäst"
+                Placeholder="Gäst"
+                Text="{Binding Guest}"/>
+            <Button
+            Text="Uppdatera rum"
+            Clicked="OnClickedUpdateRoom"
+            FontFamily="Chiller"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalOptions="Center"></Button>
+
+            <Button
+            Text="Tillbaka till lobbyn"
+            Clicked="OnBackClicked"
+            FontFamily="Chiller"
+            FontAttributes="Bold"
+            FontSize="30"
+            HorizontalOptions="Center"></Button>
+        </VerticalStackLayout>
+    </ScrollView>
+</ContentPage>

@@ -73,6 +73,14 @@ namespace HotelTransylvaniaMaui.ViewModels
             await GetDbCollection().DeleteOneAsync(x => x.Id == room.Id);
             Rooms.Remove(room);
         }
+        public static async void UpdateRoom(object r, object g)
+        {
+            var filter = Builders<Room>.Filter.Eq(i => i.RoomName, r);
+            var update = Builders<Room>.Update.Set(g => g.Guest, g);
+            var update2 = Builders<Room>.Update.Set(g => g.IsBooked, true);
+            await GetDbCollection().UpdateOneAsync(filter, update);
+            await GetDbCollection().UpdateOneAsync(filter, update2);
+        }
 
         // Hämtar alla rum i MongoDb metod
         public async Task GetRooms()
@@ -82,7 +90,7 @@ namespace HotelTransylvaniaMaui.ViewModels
         }
 
         // Data för att kommunicera med MongoDb
-        public IMongoCollection<Models.Room> GetDbCollection()
+        public static IMongoCollection<Models.Room> GetDbCollection()
         {
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://Erik:Pumpa123@cluster0.kh2vogk.mongodb.net/?retryWrites=true&w=majority");
             settings.ServerApi = new ServerApi(ServerApiVersion.V1);
