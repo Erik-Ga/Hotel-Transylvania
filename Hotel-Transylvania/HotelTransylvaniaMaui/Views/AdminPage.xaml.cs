@@ -12,7 +12,7 @@ public partial class AdminPage : ContentPage
     public AdminPage(IAudioManager audioManager)
 	{
 		InitializeComponent();
-        BindingContext = new ViewModels.AdminPageViewModel();
+        BindingContext = new ViewModels.AdminPageViewModel(AudioManager.Current);
         this.audioManager = audioManager;
     }
     bool pageStarted = false;
@@ -39,4 +39,5 @@ public partial class AdminPage : ContentPage
             await Navigation.PushAsync(page);
         }
     }
+
 }

@@ -2,6 +2,7 @@
 using CommunityToolkit.Mvvm.Input;
 using HotelTransylvaniaMaui.Models;
 using MongoDB.Driver;
+using Plugin.Maui.Audio;
 using System.Collections.ObjectModel;
 
 namespace HotelTransylvaniaMaui.ViewModels
@@ -38,10 +39,12 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string guest;
 
+        private readonly IAudioManager audioManager;
         // Skapande av lista för rum
-        public AdminPageViewModel()
+        public AdminPageViewModel(IAudioManager audioManager)
         {
             Rooms = new ObservableCollection<Models.Room>();
+            this.audioManager = audioManager;
         }
 
         // Lägger till rum i MongoDb metod
@@ -69,6 +72,9 @@ namespace HotelTransylvaniaMaui.ViewModels
             await GetDbCollection().InsertOneAsync(room);
 
             Rooms.Add(room);
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("wrench.mp3"));
+            player.Play();
+            await Application.Current.MainPage.DisplayAlert("Vackert!", "Rummet har skapats :)", "Toppen!");
 
         }
 
@@ -79,7 +85,12 @@ namespace HotelTransylvaniaMaui.ViewModels
             var room = (Room)r;
             await GetDbCollection().DeleteOneAsync(x => x.Id == room.Id);
             Rooms.Remove(room);
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("crash.mp3"));
+            player.Play();
+            await Application.Current.MainPage.DisplayAlert("Boom!", "Rummet har rivits! >:)", "Moahahaha!");
+
         }
+        //Updaterar valt rum
         public static async void UpdateRoom(object r, object g)
         {
             var filter = Builders<Room>.Filter.Eq(i => i.RoomName, r);
