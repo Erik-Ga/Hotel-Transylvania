@@ -43,7 +43,7 @@
                     Grid.Row="0"
                     Text="{Binding CurrentWeather}"
                     FontFamily="Chiller"
-                    FontSize="90"
+                    FontSize="91"
                     TextColor="DarkRed"
                     SemanticProperties.HeadingLevel="Level1"
                     HorizontalOptions="Center"
