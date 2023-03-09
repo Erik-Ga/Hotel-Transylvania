@@ -69,6 +69,7 @@ namespace HotelTransylvaniaMaui.ViewModels
             await GetDbCollection().InsertOneAsync(room);
 
             Rooms.Add(room);
+
         }
 
         // Tar bort rum i MongoDb metod
