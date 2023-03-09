@@ -1,11 +1,15 @@
+using Plugin.Maui.Audio;
+
 namespace HotelTransylvaniaMaui.Views;
 
 public partial class AdminRoomDetailsPage : ContentPage
 {
-	public AdminRoomDetailsPage()
+    private readonly IAudioManager audioManager;
+    public AdminRoomDetailsPage(IAudioManager audioManager)
 	{
 		InitializeComponent();
         BindingContext = new ViewModels.AdminRoomDetailsPageViewModel();
+        this.audioManager = audioManager;
     }
     private void OnBackClicked(object sender, EventArgs e)
     {
@@ -26,13 +30,15 @@ public partial class AdminRoomDetailsPage : ContentPage
         var guest = EntryGäst.Text;
         ViewModels.AdminRoomDetailsPageViewModel.UpdateRoom(id, roomName, price, image, roomImage, roomDescriptionImage, titelImage, sound, details, booked, guest);
     }
-    private void OnClickedCancelRoom(object sender, EventArgs e)
+    private async void OnClickedCancelRoom(object sender, EventArgs e)
     {
         Guid id = Guid.Parse(LabelId.Text);
         string roomDoorImage = DoorImage.Text;
         string guest = null;
         ViewModels.AdminRoomDetailsPageViewModel.CancelRoom(id, roomDoorImage, guest);
-        DisplayAlert("Avbokning lyckad!", "Rummet är städat och rensat på guck och redo för nästa gäst!", "Woop Woop!");
+        var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sweeping.mp3"));
+        player.Play();
+        await DisplayAlert("Avbokning lyckad!", "Rummet är städat och rensat på guck och redo för nästa gäst!", "Woop Woop!");
 
     }
 }

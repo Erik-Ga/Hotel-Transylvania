@@ -49,7 +49,7 @@
             Text="{Binding Guest}"/>
             <Button
             Text="Boka rum"
-            Clicked="OnClickedBookRoom"
+            Clicked="OnClickedBookRoomAsync"
             TextColor="DarkRed"
             BackgroundColor="Black"
             FontFamily="Chiller"

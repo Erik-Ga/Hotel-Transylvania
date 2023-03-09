@@ -38,7 +38,7 @@ public partial class HotelLayout : ContentPage
 
             if (room != null)
             {
-                var page = new RoomDetailsPage();
+                var page = new RoomDetailsPage(AudioManager.Current);
                 page.BindingContext = room;
                 await Navigation.PushAsync(page);
             }

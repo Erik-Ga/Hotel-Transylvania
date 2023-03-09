@@ -34,7 +34,7 @@ public partial class AdminPage : ContentPage
 
         if (room != null)
         {
-            var page = new AdminRoomDetailsPage();
+            var page = new AdminRoomDetailsPage(AudioManager.Current);
             page.BindingContext = room;
             await Navigation.PushAsync(page);
         }
