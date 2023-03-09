@@ -19,10 +19,14 @@ namespace HotelTransylvaniaMaui
         private async void OnClickedChangeToHotelLayout(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new HotelLayout(AudioManager.Current));
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("door.mp3"));
+            player.Play();
         }
         private async void OnClickedChangeToAdminPage(object sender, EventArgs e)
         {
             await Navigation.PushAsync(new AdminPage(AudioManager.Current));
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("typing.mp3"));
+            player.Play();
         }
         private async void Welcome(object sender, EventArgs e)
         {
