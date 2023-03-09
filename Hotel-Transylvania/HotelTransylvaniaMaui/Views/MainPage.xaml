@@ -33,14 +33,30 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"
                 Margin="40"/>
-            <Label
-                Text="{Binding CurrentWeather}"
-                FontFamily="Chiller"
-                FontSize="90"
-                TextColor="DarkRed"
-                SemanticProperties.HeadingLevel="Level1"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
+            
+            <Grid
+                ColumnDefinitions="1900"
+                RowDefinitions="100, *"
+                HorizontalOptions="Center">
+
+                <Label
+                    Grid.Row="0"
+                    Text="{Binding CurrentWeather}"
+                    FontFamily="Chiller"
+                    FontSize="90"
+                    TextColor="DarkRed"
+                    SemanticProperties.HeadingLevel="Level1"
+                    HorizontalOptions="Center"
+                    VerticalOptions="Center"/>
+
+                <Image 
+                    Grid.Row="1"
+                    HorizontalOptions="Center"
+                    Source="rain.gif"
+                    HeightRequest="250"
+                    WidthRequest="250"/>
+
+            </Grid>
 
             <Button
                 Text="Boka rum"
