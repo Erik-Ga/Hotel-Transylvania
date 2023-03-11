@@ -1,4 +1,5 @@
-﻿using HotelTransylvaniaMaui.Views;
+﻿using HotelTransylvaniaMaui.Models;
+using HotelTransylvaniaMaui.Views;
 using Plugin.Maui.Audio;
 
 namespace HotelTransylvaniaMaui
@@ -30,8 +31,10 @@ namespace HotelTransylvaniaMaui
         }
         private async void Welcome(object sender, EventArgs e)
         {
-            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("hotel.mp3"));
-            player.Play();
+            //var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("hotel.mp3"));
+            //player.Play();
+            var hotelmusic = ThemeMusic.Instance;
+            hotelmusic.MusicPlay();
         }
     }
 }
