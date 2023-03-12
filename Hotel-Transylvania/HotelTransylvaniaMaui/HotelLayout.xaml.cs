@@ -6,6 +6,7 @@ namespace HotelTransylvaniaMaui;
 
 public partial class HotelLayout : ContentPage
 {
+    // Grunden för uppspelning av ljud
     private readonly IAudioManager audioManager;
     public HotelLayout(IAudioManager audioManager)
 	{
@@ -26,10 +27,9 @@ public partial class HotelLayout : ContentPage
         }
     }
 
-    // Gör så att man kan klicka på rum
+    // För att kunna gå till detaljvy av respektive existerande rum
     private async void OnListViewitemSelected(object sender, SelectedItemChangedEventArgs e)
     {
-
         var room = ((ListView)sender).SelectedItem as Models.Room;
         if (room.IsBooked == false)
         {
@@ -43,6 +43,7 @@ public partial class HotelLayout : ContentPage
                 await Navigation.PushAsync(page);
             }
         }
+        // Ifall rummet redan är bokat blockas användare från att gå vidare
         else if (room.IsBooked == true)
         {
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("scream.mp3"));

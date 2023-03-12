@@ -7,6 +7,7 @@ namespace HotelTransylvaniaMaui.Views;
 
 public partial class AdminPage : ContentPage
 {
+    // Grunden för uppspelning av ljud
     private readonly IAudioManager audioManager;
 
     public AdminPage(IAudioManager audioManager)
@@ -16,6 +17,7 @@ public partial class AdminPage : ContentPage
         this.audioManager = audioManager;
     }
     bool pageStarted = false;
+
     protected override async void OnAppearing()
     {
         base.OnAppearing();
@@ -25,6 +27,8 @@ public partial class AdminPage : ContentPage
             pageStarted = true;
         }
     }
+
+    // För att kunna gå till detaljvy av respektive existerande rum
     private async void OnListViewitemSelected(object sender, SelectedItemChangedEventArgs e)
     {
         var room = ((ListView)sender).SelectedItem as Models.Room;

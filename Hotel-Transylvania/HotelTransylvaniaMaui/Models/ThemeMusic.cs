@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 
 namespace HotelTransylvaniaMaui.Models
 {
+    // Singleton implementation
     public class ThemeMusic
     {
         private readonly IAudioManager audioManager;
@@ -28,6 +29,7 @@ namespace HotelTransylvaniaMaui.Models
                 return instance;
             } 
         }
+        // Startar huvudmusiken
         public async void MusicPlay()
         {
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("hotel.mp3"));

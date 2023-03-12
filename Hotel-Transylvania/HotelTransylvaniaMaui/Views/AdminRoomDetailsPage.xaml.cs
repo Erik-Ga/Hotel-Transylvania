@@ -4,6 +4,7 @@ namespace HotelTransylvaniaMaui.Views;
 
 public partial class AdminRoomDetailsPage : ContentPage
 {
+    // Grunden för uppspelning av ljud
     private readonly IAudioManager audioManager;
     public AdminRoomDetailsPage(IAudioManager audioManager)
 	{
@@ -11,10 +12,12 @@ public partial class AdminRoomDetailsPage : ContentPage
         BindingContext = new ViewModels.AdminRoomDetailsPageViewModel();
         this.audioManager = audioManager;
     }
+    // Går tillbaka ett steg i applikationen
     private void OnBackClicked(object sender, EventArgs e)
     {
         Navigation.PopAsync();
     }
+    // Kallar på metod för att uppdatera befintlig data i valt rum
     private void OnClickedUpdateRoom(object sender, EventArgs e)
     {
         Guid id = Guid.Parse(LabelId.Text);
@@ -30,6 +33,7 @@ public partial class AdminRoomDetailsPage : ContentPage
         var guest = EntryGäst.Text;
         ViewModels.AdminRoomDetailsPageViewModel.UpdateRoom(id, roomName, price, image, roomImage, roomDescriptionImage, titelImage, sound, details, booked, guest);
     }
+    // Kallar på metod för att avboka gäst i valt rum
     private async void OnClickedCancelRoom(object sender, EventArgs e)
     {
         Guid id = Guid.Parse(LabelId.Text);

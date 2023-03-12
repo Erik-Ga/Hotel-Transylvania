@@ -12,6 +12,7 @@ namespace HotelTransylvaniaMaui.ViewModels
 {
     internal partial class AdminRoomDetailsPageViewModel : ObservableObject
     {
+        // Autogenererande kod
         [ObservableProperty]
         ObservableCollection<Models.Room> rooms;
         [ObservableProperty]
@@ -41,6 +42,7 @@ namespace HotelTransylvaniaMaui.ViewModels
         [ObservableProperty]
         string guest;
 
+        // Tillåter admin att uppdatera befintliga rum
         public static async void UpdateRoom(Guid id, string r, int p, string i, string ri, string rdi, string ti, string s, string d, bool b, string g)
         {
             var filter = Builders<Room>.Filter.Eq(x => x.Id, id);
@@ -65,6 +67,7 @@ namespace HotelTransylvaniaMaui.ViewModels
             await GetDbCollection().UpdateOneAsync(filter, update9);
             await GetDbCollection().UpdateOneAsync(filter, update10);
         }
+        // Avbokar gäst i valt rum
         public static async void CancelRoom(Guid id, string d, string g)
         {
             var filter = Builders<Room>.Filter.Eq(x => x.Id, id);
@@ -76,6 +79,7 @@ namespace HotelTransylvaniaMaui.ViewModels
             await GetDbCollection().UpdateOneAsync(filter, update3);
         }
 
+        // Data för att kommunicera med MongoDb
         public static IMongoCollection<Models.Room> GetDbCollection()
         {
             var settings = MongoClientSettings.FromConnectionString("mongodb+srv://Erik:Pumpa123@cluster0.kh2vogk.mongodb.net/?retryWrites=true&w=majority");

@@ -6,6 +6,7 @@ namespace HotelTransylvaniaMaui
 {
     public partial class MainPage : ContentPage
     {
+        // Grunden för uppspelning av ljud
         private readonly IAudioManager audioManager;
         
         public MainPage(IAudioManager audioManager)

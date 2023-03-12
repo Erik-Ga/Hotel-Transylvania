@@ -15,6 +15,8 @@ namespace HotelTransylvaniaMaui
 
         // Skapar en instans av API för att man ska kunna hämta och hänvisa till API-data
         public Models.WeatherData WeatherData { get; set; }
+        
+        // Printar ut nuvarande temperatur i Transylvania och ifall "pool är öppen" baserat på resultat
         public MainPageViewModel()
         {
             try
