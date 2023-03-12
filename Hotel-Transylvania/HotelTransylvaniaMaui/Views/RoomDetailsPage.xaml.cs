@@ -26,7 +26,11 @@ public partial class RoomDetailsPage : ContentPage
         var roomDoorImage = DoorImage.Text;
         ViewModels.RoomDetailsPageViewModel.UpdateRoom(roomName, guest, roomDoorImage);
         var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("yay.mp3"));
+        player.Volume = 0.6;
         player.Play();
+        var player2 = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("thankyou.mp3"));
+        player2.Volume = 0.6;
+        player2.Play();
         await DisplayAlert("Välkommen!", "Bokningen lyckades! :)", "Yay!");
     }
 }
