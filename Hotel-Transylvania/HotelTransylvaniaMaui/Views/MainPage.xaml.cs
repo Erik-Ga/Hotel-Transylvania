@@ -33,9 +33,12 @@ namespace HotelTransylvaniaMaui
         private async void OnClickedWelcome(object sender, EventArgs e)
         {
             var hotelmusic = ThemeMusic.Instance;
+            hotelmusic.WelcomeSoundPlay();
             hotelmusic.MusicPlay();
+            BokaButton.IsVisible = true;
+            AdminButton.IsVisible = true;
             SpookyButton.IsVisible = false;
-            await DisplayAlert("Spooky!", "Du har aktiverat maximum spookyness...", "Scary!");
+            await DisplayAlert("Spooky!", "Du har aktiverat maximum spookyness... Välkommen in!", "Scary!");
         }
     }
 }

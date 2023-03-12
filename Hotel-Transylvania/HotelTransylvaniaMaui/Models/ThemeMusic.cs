@@ -36,5 +36,14 @@ namespace HotelTransylvaniaMaui.Models
             player.Play();
             player.Loop = true;
         }
+        public async void WelcomeSoundPlay()
+        {
+            var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("thunder.mp3"));
+            player.Volume = 0.3;
+            player.Play();
+            var player2 = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("welcome.mp3"));
+            player2.Volume = 0.3;
+            player2.Play();
+        }
     }
 }

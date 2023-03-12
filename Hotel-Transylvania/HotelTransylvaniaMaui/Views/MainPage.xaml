@@ -11,18 +11,6 @@
             Padding="30,0"
             VerticalOptions="Center">
 
-            <Button
-                x:Name="SpookyButton"
-                Text="Spooky"
-                TextColor="DarkRed"
-                FontAttributes="Bold"
-                FontFamily="Chiller"
-                FontSize="30"
-                BackgroundColor="Black"
-                Clicked="OnClickedWelcome"
-                Margin="20"
-                Padding="10"
-                WidthRequest="110"/>
             <Label
                 x:Name="WelcomeLabel"
                 Text="Välkommen till hotell Transylvania!"
@@ -45,9 +33,24 @@
                 SemanticProperties.HeadingLevel="Level1"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
+            
+            <Button
+                x:Name="SpookyButton"
+                Text="Spooky"
+                TextColor="DarkRed"
+                FontAttributes="Bold"
+                FontFamily="Chiller"
+                FontSize="30"
+                BackgroundColor="Black"
+                Clicked="OnClickedWelcome"
+                Margin="20"
+                Padding="10"
+                WidthRequest="110"/>
 
             <Button
-                Text="Boka rum"
+                x:Name="BokaButton"
+                IsVisible="false"
+                Text="Visa rum"
                 TextColor="DarkRed"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
@@ -58,6 +61,8 @@
                 Padding="10"
                 WidthRequest="110"/>
             <Button
+                x:Name="AdminButton"
+                IsVisible="false"
                 Text="Admin"
                 TextColor="DarkRed"
                 FontAttributes="Bold"
