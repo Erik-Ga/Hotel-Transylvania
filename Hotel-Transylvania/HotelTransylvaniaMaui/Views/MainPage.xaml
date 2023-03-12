@@ -12,13 +12,14 @@
             VerticalOptions="Center">
 
             <Button
+                x:Name="SpookyButton"
                 Text="Spooky"
                 TextColor="DarkRed"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
                 FontSize="30"
                 BackgroundColor="Black"
-                Clicked="Welcome"
+                Clicked="OnClickedWelcome"
                 Margin="20"
                 Padding="10"
                 WidthRequest="110"/>

@@ -48,7 +48,6 @@ namespace HotelTransylvaniaMaui
         // Data för att kommunicera med API
         public static async Task<Models.WeatherData> GetWeatherAsync()
         {
-            Console.WriteLine("Getting weather!");
             var client = new HttpClient();
             client.BaseAddress = new Uri("https://api.api-ninjas.com/");
             client.DefaultRequestHeaders.Add("X-Api-Key", "3N/wr+dj1T8aSx0c9HE34g==GP4plkr1RNlHDyFI");
@@ -60,7 +59,6 @@ namespace HotelTransylvaniaMaui
             {
                 string responseString = await response.Content.ReadAsStringAsync();
                 weather = JsonSerializer.Deserialize<Models.WeatherData>(responseString);
-                Console.WriteLine("Weather ready!");
             }
 
             return weather;
