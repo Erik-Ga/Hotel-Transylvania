@@ -90,15 +90,6 @@ namespace HotelTransylvaniaMaui.ViewModels
             await Application.Current.MainPage.DisplayAlert("Boom!", "Rummet har rivits! >:)", "Moahahaha!");
 
         }
-        // Uppdaterar valt rum
-        //public static async void UpdateRoom(object r, object g)
-        //{
-        //    var filter = Builders<Room>.Filter.Eq(i => i.RoomName, r);
-        //    var update = Builders<Room>.Update.Set(g => g.Guest, g);
-        //    var update2 = Builders<Room>.Update.Set(g => g.IsBooked, true);
-        //    await GetDbCollection().UpdateOneAsync(filter, update);
-        //    await GetDbCollection().UpdateOneAsync(filter, update2);
-        //}
 
         // Hämtar alla rum i MongoDb metod
         public async Task GetRooms()
