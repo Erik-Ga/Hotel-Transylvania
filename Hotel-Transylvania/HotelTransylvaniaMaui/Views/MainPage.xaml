@@ -13,6 +13,8 @@
 
             <Label
                 x:Name="WelcomeLabel"
+                Opacity="0"
+                IsVisible="false"
                 Text="Välkommen till hotell Transylvania!"
                 FontFamily="Chiller"
                 FontAttributes="Bold"
@@ -25,19 +27,20 @@
 
             <Button
                 x:Name="SpookyButton"
-                Text="Spooky"
+                Text="Enter"
                 TextColor="DarkRed"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
-                FontSize="30"
+                FontSize="50"
                 BackgroundColor="Black"
                 Clicked="OnClickedWelcome"
                 Margin="20"
                 Padding="10"
-                WidthRequest="110"/>
+                WidthRequest="180"/>
 
             <Button
                 x:Name="BokaButton"
+                Opacity="0"
                 IsVisible="false"
                 Text="Visa rum"
                 TextColor="DarkRed"
@@ -51,6 +54,7 @@
                 WidthRequest="110"/>
             <Button
                 x:Name="AdminButton"
+                Opacity="0"
                 IsVisible="false"
                 Text="Admin"
                 TextColor="DarkRed"
@@ -64,6 +68,8 @@
                 WidthRequest="110"/>
             <Button
                 x:Name="ActivityButton"
+                Opacity="0"
+                IsVisible="false"
                 Text="Aktiviteter"
                 TextColor="DarkRed"
                 FontAttributes="Bold"
