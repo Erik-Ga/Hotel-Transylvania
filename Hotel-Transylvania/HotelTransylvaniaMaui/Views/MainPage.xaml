@@ -23,17 +23,6 @@
                 VerticalOptions="Center"
                 Margin="40"/>
 
-
-            <Label
-                Grid.Row="0"
-                Text="{Binding CurrentWeather}"
-                FontFamily="Chiller"
-                FontSize="91"
-                TextColor="DarkRed"
-                SemanticProperties.HeadingLevel="Level1"
-                HorizontalOptions="Center"
-                VerticalOptions="Center"/>
-            
             <Button
                 x:Name="SpookyButton"
                 Text="Spooky"
@@ -73,6 +62,18 @@
                 Margin="20"
                 Padding="10"
                 WidthRequest="110"/>
+            <Button
+                x:Name="ActivityButton"
+                Text="Aktiviteter"
+                TextColor="DarkRed"
+                FontAttributes="Bold"
+                FontFamily="Chiller"
+                FontSize="30"
+                BackgroundColor="Black"
+                Clicked="OnClickedChangeToActivityPage"
+                Margin="20"
+                Padding="10"
+                WidthRequest="150"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

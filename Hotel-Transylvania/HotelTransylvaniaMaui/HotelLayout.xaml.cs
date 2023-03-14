@@ -18,7 +18,7 @@ public partial class HotelLayout : ContentPage
     // Printar ut alla rum ifrån MongoDb
     bool pageStarted = false;
     protected override async void OnAppearing()
-    {
+    {        
         base.OnAppearing();
         if (!pageStarted)
         {

@@ -24,7 +24,8 @@
                                    Grid.RowSpan="5"
                                    Source="{Binding ImageSource}"
                                    Aspect="Fill"
-                                   HeightRequest="400"/>
+                                   HeightRequest="400"
+                                  />
                                 <Image
                                    Grid.Row="0"
                                    Grid.Column="0"

@@ -55,6 +55,9 @@
 	</ItemGroup>
 
 	<ItemGroup>
+	  <Compile Update="Views\ActivityPage.xaml.cs">
+	    <DependentUpon>ActivityPage.xaml</DependentUpon>
+	  </Compile>
 	  <Compile Update="Views\RoomDetailsPage.xaml.cs">
 	    <DependentUpon>RoomDetailsPage.xaml</DependentUpon>
 	  </Compile>
@@ -68,6 +71,9 @@
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\AdminRoomDetailsPage.xaml">
+	    <Generator>MSBuild:Compile</Generator>
+	  </MauiXaml>
+	  <MauiXaml Update="Views\ActivityPage.xaml">
 	    <Generator>MSBuild:Compile</Generator>
 	  </MauiXaml>
 	  <MauiXaml Update="Views\RoomDetailsPage.xaml">

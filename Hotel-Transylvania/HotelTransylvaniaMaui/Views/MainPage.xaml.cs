@@ -12,7 +12,6 @@ namespace HotelTransylvaniaMaui
         public MainPage(IAudioManager audioManager)
         {
             InitializeComponent();
-            BindingContext = new MainPageViewModel().WeatherData;
             this.audioManager = audioManager;
         }
         // Byter sida till hotellayout
@@ -41,6 +40,11 @@ namespace HotelTransylvaniaMaui
             AdminButton.IsVisible = true;
             SpookyButton.IsVisible = false;
             await DisplayAlert("Spooky!", "Du har aktiverat maximum spookyness... Välkommen in!", "Scary!");
+        }
+
+        private async void OnClickedChangeToActivityPage(object sender, EventArgs e)
+        {
+            await Navigation.PushAsync(new ActivityPage(AudioManager.Current));
         }
     }
 }
