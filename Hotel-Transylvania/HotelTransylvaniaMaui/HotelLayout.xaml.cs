@@ -47,7 +47,7 @@ public partial class HotelLayout : ContentPage
         else if (room.IsBooked == true)
         {
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("scream.mp3"));
-            player.Volume = 0.5;
+            player.Volume = 0.4;
             player.Play();
             var player2 = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("sorry.mp3"));
             player2.Volume = 0.5;

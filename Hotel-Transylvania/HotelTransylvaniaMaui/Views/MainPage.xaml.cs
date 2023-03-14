@@ -20,6 +20,7 @@ namespace HotelTransylvaniaMaui
         {
             await Navigation.PushAsync(new HotelLayout(AudioManager.Current));
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("door.mp3"));
+            player.Volume = 0.6;
             player.Play();
         }
         // Byter sida till adminlayout
@@ -27,6 +28,7 @@ namespace HotelTransylvaniaMaui
         {
             await Navigation.PushAsync(new AdminPage(AudioManager.Current));
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("typing.mp3"));
+            player.Volume = 0.6;
             player.Play();
         }
         // Startar spooky bakgrundsmusik

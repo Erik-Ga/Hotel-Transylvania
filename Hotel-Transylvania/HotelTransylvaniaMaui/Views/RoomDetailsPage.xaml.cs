@@ -14,7 +14,7 @@ public partial class RoomDetailsPage : ContentPage
         this.audioManager = audioManager;
     }
     // Går tillbaka ett steg i applikationen
-    private void OnBackClicked(object sender, EventArgs e)
+    private void OnBackClicked(object sender, EventArgs e) 
     {
         Navigation.PopAsync();  
     }
@@ -26,10 +26,10 @@ public partial class RoomDetailsPage : ContentPage
         var roomDoorImage = DoorImage.Text;
         ViewModels.RoomDetailsPageViewModel.UpdateRoom(roomName, guest, roomDoorImage);
         var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("yay.mp3"));
-        player.Volume = 0.6;
+        player.Volume = 0.4;
         player.Play();
         var player2 = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("thankyou.mp3"));
-        player2.Volume = 0.6;
+        player2.Volume = 0.4;
         player2.Play();
         await DisplayAlert("Välkommen!", "Bokningen lyckades! :)", "Yay!");
     }
