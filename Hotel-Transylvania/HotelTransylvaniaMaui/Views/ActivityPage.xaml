@@ -6,6 +6,8 @@
              BackgroundImageSource="chill.gif">
     <VerticalStackLayout>
         <Label
+                IsVisible="false"
+                x:Name="WeatherLabel"
                 Grid.Row="0"
                 Text="{Binding CurrentWeather}"
                 FontFamily="Chiller"
@@ -14,6 +16,27 @@
                 SemanticProperties.HeadingLevel="Level1"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-        
+        <Label 
+                IsVisible="false"
+                x:Name="NoWeatherLabel"
+                Grid.Row="0"
+                Text="Vädret kunde inte hittas :("
+                FontFamily="Chiller"
+                FontSize="91"
+                TextColor="DarkRed"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+        <Label
+                HeightRequest="50"/>
+
+        <Image 
+            HorizontalOptions="Center"
+            x:Name="ImagePool"
+            Source=""
+            WidthRequest="300"
+            HeightRequest="300"
+            />
+
     </VerticalStackLayout>
 </ContentPage>

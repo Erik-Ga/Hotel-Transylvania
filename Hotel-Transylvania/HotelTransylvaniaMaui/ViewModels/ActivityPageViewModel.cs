@@ -1,10 +1,5 @@
 ﻿using HotelTransylvaniaMaui.Models;
-using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
 using System.Text.Json;
-using System.Threading.Tasks;
 
 namespace HotelTransylvaniaMaui.ViewModels
 {
@@ -14,18 +9,33 @@ namespace HotelTransylvaniaMaui.ViewModels
         public Models.WeatherData WeatherData { get; set; }
 
         // Printar ut nuvarande temperatur i Transylvania och ifall "pool är öppen" baserat på resultat
-        public ActivityPageViewModel() 
+        public ActivityPageViewModel()
         {
             var task = Task.Run(() => GetWeatherAsync());
             task.Wait();
-            WeatherData = task.Result;
-            if (WeatherData.Temp >= 20)
+
+            try
             {
-                WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är öppen, kör på!";
+                WeatherData = task.Result;
+                if (WeatherData != null)
+                {
+                    if (WeatherData.Temp >= 20)
+                    {
+                        WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är öppen, kör på!";
+                    }
+                    else
+                    {
+                        WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är stängd, kom tillbaka en annan dag!";
+                    }
+                }
             }
-            else
+            catch (NullReferenceException)
             {
-                WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + ", poolen är stängd, kom tillbaka en annan dag!";
+
+            }
+            finally
+            {
+
             }
         }
         // Data för att kommunicera med API

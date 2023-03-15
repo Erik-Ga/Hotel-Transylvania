@@ -46,26 +46,12 @@
                 TextColor="DarkRed"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
-                FontSize="30"
+                FontSize="40"
                 BackgroundColor="Black"
                 Clicked="OnClickedChangeToHotelLayout"
                 Margin="20"
                 Padding="10"
-                WidthRequest="110"/>
-            <Button
-                x:Name="AdminButton"
-                Opacity="0"
-                IsVisible="false"
-                Text="Admin"
-                TextColor="DarkRed"
-                FontAttributes="Bold"
-                FontFamily="Chiller"
-                FontSize="30"
-                BackgroundColor="Black"
-                Clicked="OnClickedChangeToAdminPage"
-                Margin="20"
-                Padding="10"
-                WidthRequest="110"/>
+                WidthRequest="150"/>
             <Button
                 x:Name="ActivityButton"
                 Opacity="0"
@@ -74,9 +60,23 @@
                 TextColor="DarkRed"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
-                FontSize="30"
+                FontSize="40"
                 BackgroundColor="Black"
                 Clicked="OnClickedChangeToActivityPage"
+                Margin="20"
+                Padding="10"
+                WidthRequest="160"/>
+            <Button
+                x:Name="AdminButton"
+                Opacity="0"
+                IsVisible="false"
+                Text="Admin"
+                TextColor="DarkRed"
+                FontAttributes="Bold"
+                FontFamily="Chiller"
+                FontSize="40"
+                BackgroundColor="Black"
+                Clicked="OnClickedChangeToAdminPage"
                 Margin="20"
                 Padding="10"
                 WidthRequest="150"/>
