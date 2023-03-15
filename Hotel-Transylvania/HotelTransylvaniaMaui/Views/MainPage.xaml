@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HotelTransylvaniaMaui.MainPage"
              BackgroundImageSource="hotel.gif"
-             Title="Hotel Transylvania Main Page">
+             Title="Hotel Transylvania Main Page"
+             x:Name="ContentImage">
 
     <ScrollView>
         <VerticalStackLayout

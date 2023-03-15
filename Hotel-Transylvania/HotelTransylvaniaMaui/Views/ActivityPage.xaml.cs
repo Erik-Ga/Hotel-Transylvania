@@ -21,7 +21,8 @@ public partial class ActivityPage : ContentPage
             if(WeatherLabel.Text == null)
             {
                 NoWeatherLabel.IsVisible = true;
-                ImagePool.Source = "poolhuh.jpg";
+                ImagePool.Source = "spookypoolhuh.png";
+                ImageBowling.Source = "spookybowlinghuh.png";
             }
             else if(WeatherLabel.Text != null)
             {
@@ -30,13 +31,15 @@ public partial class ActivityPage : ContentPage
             pageStarted = true;
             if(WeatherLabel.IsVisible == true) 
             {
-                if (WeatherLabel.Text.Contains("öppen"))
+                if (WeatherLabel.Text.Contains("pool"))
                 {
-                    ImagePool.Source = "pool.jpg";
+                    ImagePool.Source = "spookypool.png";
+                    ImageBowling.Source = "spookybowlingclosed.png";
                 }
-                else if(WeatherLabel.Text.Contains("stängd"))
+                else if(WeatherLabel.Text.Contains("bowling"))
                 {
-                    ImagePool.Source = "poolclosed.jpg";
+                    ImagePool.Source = "spookypoolclosed.png";
+                    ImageBowling.Source = "spookybowling.png";
                 }
             }
         }

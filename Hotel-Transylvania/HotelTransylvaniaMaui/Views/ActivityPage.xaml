@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="HotelTransylvaniaMaui.Views.ActivityPage"
              Title="Activity Page"
-             BackgroundImageSource="chill.gif">
+             BackgroundImageSource="skellyfun.gif">
+    <ScrollView>
     <VerticalStackLayout>
         <Label
                 IsVisible="false"
@@ -28,15 +29,42 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
         <Label
-                HeightRequest="50"/>
+                HeightRequest="100"/>
+        <Label
+                x:Name="PoolLabel"
+                Grid.Row="0"
+                Text="Monster Pool"
+                FontFamily="Chiller"
+                FontSize="91"
+                TextColor="DarkRed"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
 
         <Image 
             HorizontalOptions="Center"
             x:Name="ImagePool"
             Source=""
-            WidthRequest="300"
-            HeightRequest="300"
-            />
+            WidthRequest="400"
+            HeightRequest="400"/>
+        <Label
+            x:Name="BowlingLabel"
+            Grid.Row="0"
+            Text="Spooky Bowling"
+            FontFamily="Chiller"
+            FontSize="91"
+            TextColor="DarkRed"
+            SemanticProperties.HeadingLevel="Level1"
+            HorizontalOptions="Center"
+            VerticalOptions="Center"/>
 
-    </VerticalStackLayout>
+        <Image 
+            HorizontalOptions="Center"
+            x:Name="ImageBowling"
+            Source=""
+            WidthRequest="400"
+            HeightRequest="400"/>
+
+        </VerticalStackLayout>
+    </ScrollView>
 </ContentPage>

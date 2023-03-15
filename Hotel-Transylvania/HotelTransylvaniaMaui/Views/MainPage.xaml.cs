@@ -17,10 +17,12 @@ namespace HotelTransylvaniaMaui
         // Byter sida till hotellayout
         private async void OnClickedChangeToHotelLayout(object sender, EventArgs e)
         {
+            await ContentImage.FadeTo(0, 500);
             await Navigation.PushAsync(new HotelLayout(AudioManager.Current));
             var player = audioManager.CreatePlayer(await FileSystem.OpenAppPackageFileAsync("door.mp3"));
             player.Volume = 0.6;
             player.Play();
+            ContentImage.FadeTo(1, 500);
         }
         // Byter sida till adminlayout
         private async void OnClickedChangeToAdminPage(object sender, EventArgs e)
