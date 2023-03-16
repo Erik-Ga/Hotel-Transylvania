@@ -5,8 +5,8 @@
              Title="Activity Page"
              BackgroundImageSource="skellyfun.gif">
     <ScrollView>
-    <VerticalStackLayout>
-        <Label
+        <VerticalStackLayout>
+            <Label
                 IsVisible="false"
                 x:Name="WeatherLabel"
                 Grid.Row="0"
@@ -17,7 +17,7 @@
                 SemanticProperties.HeadingLevel="Level1"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-        <Label 
+            <Label 
                 IsVisible="false"
                 x:Name="NoWeatherLabel"
                 Grid.Row="0"
@@ -28,9 +28,9 @@
                 SemanticProperties.HeadingLevel="Level1"
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
-        <Label
+            <Label
                 HeightRequest="50"/>
-        <Label
+            <Label
                 x:Name="PoolLabel"
                 Grid.Row="0"
                 Text="Monster Pool"
@@ -41,47 +41,47 @@
                 HorizontalOptions="Center"
                 VerticalOptions="Center"/>
 
-        <Image 
-            HorizontalOptions="Center"
-            x:Name="ImagePool"
-            Source=""
-            WidthRequest="400"
-            HeightRequest="400"/>
-        <Label
-            x:Name="BowlingLabel"
-            Grid.Row="0"
-            Text="Spooky Bowling"
-            FontFamily="Chiller"
-            FontSize="91"
-            TextColor="DarkRed"
-            SemanticProperties.HeadingLevel="Level1"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"/>
-
-        <Image 
-            HorizontalOptions="Center"
-            x:Name="ImageBowling"
-            Source=""
-            WidthRequest="400"
-            HeightRequest="400"/>
-            <Label
-            x:Name="DiscoLabel"
-            Grid.Row="0"
-            Text="Werewolf Disco"
-            FontFamily="Chiller"
-            FontSize="91"
-            TextColor="DarkRed"
-            SemanticProperties.HeadingLevel="Level1"
-            HorizontalOptions="Center"
-            VerticalOptions="Center"
-            Margin="50"/>
             <Image 
-            Margin="-125"
-            HorizontalOptions="Center"
-            x:Name="ImageDisco"
-            Source=""
-            WidthRequest="400"
-            HeightRequest="400"/>
+                HorizontalOptions="Center"
+                x:Name="ImagePool"
+                Source=""
+                WidthRequest="400"
+                HeightRequest="400"/>
+            <Label
+                x:Name="BowlingLabel"
+                Grid.Row="0"
+                Text="Spooky Bowling"
+                FontFamily="Chiller"
+                FontSize="91"
+                TextColor="DarkRed"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"/>
+
+            <Image 
+                HorizontalOptions="Center"
+                x:Name="ImageBowling"
+                Source=""
+                WidthRequest="400"
+                HeightRequest="400"/>
+            <Label
+                x:Name="DiscoLabel"
+                Grid.Row="0"
+                Text="Werewolf Disco"
+                FontFamily="Chiller"
+                FontSize="91"
+                TextColor="DarkRed"
+                SemanticProperties.HeadingLevel="Level1"
+                HorizontalOptions="Center"
+                VerticalOptions="Center"
+                Margin="50"/>
+            <Image 
+                Margin="-125"
+                HorizontalOptions="Center"
+                x:Name="ImageDisco"
+                Source=""
+                WidthRequest="400"
+                HeightRequest="400"/>
             <Label 
                 HeightRequest="50"/>
 

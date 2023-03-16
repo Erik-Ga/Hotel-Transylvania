@@ -21,11 +21,11 @@ namespace HotelTransylvaniaMaui.ViewModels
                 {
                     if (WeatherData.Temp >= 15)
                     {
-                        WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + "! Tips på aktivitet: Monster Pool!";
+                        WeatherData.CurrentWeather = "Temperaturen: " + WeatherData.Temp + " grader! Tips på aktivitet: Monster Pool!";
                     }
                     else
                     {
-                        WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + "! Tips på aktivitet: Spooky bowling!";
+                        WeatherData.CurrentWeather = "Temperaturen är: " + WeatherData.Temp + "! Tips på aktivitet: Spooky bowling och Werewolf Disco!";
                     }
                 }
             }
