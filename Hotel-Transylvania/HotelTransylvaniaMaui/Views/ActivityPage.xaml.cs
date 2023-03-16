@@ -18,6 +18,7 @@ public partial class ActivityPage : ContentPage
         base.OnAppearing();
         if (!pageStarted)
         {
+            ImageDisco.Source = "dance.gif";
             if(WeatherLabel.Text == null)
             {
                 NoWeatherLabel.IsVisible = true;
