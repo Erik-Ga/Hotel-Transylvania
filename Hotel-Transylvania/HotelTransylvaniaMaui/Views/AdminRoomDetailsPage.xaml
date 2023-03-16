@@ -108,7 +108,11 @@
                 FontFamily="Chiller"
                 FontAttributes="Bold"
                 FontSize="30"
-                HorizontalOptions="Center"></Button>
+                HorizontalOptions="Center"
+                BorderColor="LawnGreen"
+                BorderWidth="5"></Button>
+            <Label
+                HeightRequest="5"/>
             <Button 
                 Text="Avboka rum"
                 TextColor="LawnGreen"
@@ -117,9 +121,11 @@
                 FontFamily="Chiller"
                 FontAttributes="Bold"
                 FontSize="30"
-                HorizontalOptions="Center"></Button>
-
-
+                HorizontalOptions="Center"
+                BorderColor="LawnGreen"
+                BorderWidth="5"></Button>
+            <Label
+                HeightRequest="5"/>
             <Button
                 Text="Tillbaka till lobbyn"
                 TextColor="LawnGreen"
@@ -128,7 +134,11 @@
                 FontFamily="Chiller"
                 FontAttributes="Bold"
                 FontSize="30"
-                HorizontalOptions="Center"></Button>
+                HorizontalOptions="Center"
+                BorderColor="LawnGreen"
+                BorderWidth="5"></Button>
+            <Label
+                HeightRequest="30"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

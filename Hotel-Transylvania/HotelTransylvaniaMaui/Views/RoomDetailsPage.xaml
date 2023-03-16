@@ -41,31 +41,38 @@
                Style="{DynamicResource SubtitleStyle}"></Label>
 
             <Entry 
-            x:Name="GuestEntry"
-            Placeholder="Skriv ditt namn"
-            TextColor="DarkRed"
-            BackgroundColor="Black"
-            WidthRequest="300"
-            Text="{Binding Guest}"/>
+                x:Name="GuestEntry"
+                Placeholder="Skriv ditt namn"
+                TextColor="DarkRed"
+                BackgroundColor="Black"
+                WidthRequest="300"
+                Text="{Binding Guest}"/>
+            <Label
+                HeightRequest="10"/>
             <Button
-            Text="Boka rum"
-            Clicked="OnClickedBookRoomAsync"
-            TextColor="DarkRed"
-            BackgroundColor="Black"
-            FontFamily="Chiller"
-            FontAttributes="Bold"
-            FontSize="30"
-            HorizontalOptions="Center"></Button>
+                Text="Boka rum"
+                Clicked="OnClickedBookRoomAsync"
+                TextColor="DarkRed"
+                BackgroundColor="Black"
+                FontFamily="Chiller"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"
+                BorderColor="DarkRed"
+                BorderWidth="5"/>
+            <Label
+                HeightRequest="10"/>
 
             <Button
-            Text="Tillbaka till lobbyn"
-            TextColor="DarkRed"
-            BackgroundColor="Black"
-            Clicked="OnBackClicked"
-            FontFamily="Chiller"
-            FontAttributes="Bold"
-            FontSize="30"
-            HorizontalOptions="Center"></Button>
-    </VerticalStackLayout>
+                Text="Tillbaka till lobbyn"
+                TextColor="DarkRed"
+                BackgroundColor="Black"
+                Clicked="OnBackClicked"
+                FontFamily="Chiller"
+                FontAttributes="Bold"
+                FontSize="30"
+                HorizontalOptions="Center"                                BorderColor="DarkRed"
+                BorderWidth="5"/>
+        </VerticalStackLayout>
     </ScrollView>
 </ContentPage>

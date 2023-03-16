@@ -36,7 +36,8 @@
                    Text="{Binding IsBooked}"/>
             <Entry Placeholder="Gäst"
                    Text="{Binding Guest}"/>
-
+            <Label
+                HeightRequest="10"/>
             <Button
                 Command="{Binding AddRoomCommand}"
                 Text="Lägg till rum" 
@@ -45,12 +46,15 @@
                 FontFamily="Chiller"
                 FontAttributes="Bold"
                 FontSize="35"
-                HorizontalOptions="Center" />
-            
+                HorizontalOptions="Center" 
+                BorderColor="LawnGreen"
+                BorderWidth="5"/>
+            <Label
+                HeightRequest="50"/>
 
             <ListView
-            ItemsSource="{Binding Rooms}"
-            ItemSelected="OnListViewitemSelected">
+                ItemsSource="{Binding Rooms}"
+                ItemSelected="OnListViewitemSelected">
                 <ListView.ItemTemplate>
                     <DataTemplate>
                         <ViewCell>

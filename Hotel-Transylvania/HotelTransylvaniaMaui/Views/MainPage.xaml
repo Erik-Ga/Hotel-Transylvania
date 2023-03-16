@@ -32,12 +32,15 @@
                 TextColor="DarkRed"
                 FontAttributes="Bold"
                 FontFamily="Chiller"
-                FontSize="50"
+                FontSize="100"
                 BackgroundColor="Black"
                 Clicked="OnClickedWelcome"
                 Margin="20"
                 Padding="10"
-                WidthRequest="180"/>
+                WidthRequest="220"
+                BorderColor="DarkRed"
+                BorderWidth="10"
+                />
 
             <Button
                 x:Name="BokaButton"
@@ -52,7 +55,9 @@
                 Clicked="OnClickedChangeToHotelLayout"
                 Margin="20"
                 Padding="10"
-                WidthRequest="150"/>
+                WidthRequest="150"
+                BorderColor="DarkRed"
+                BorderWidth="5"/>
             <Button
                 x:Name="ActivityButton"
                 Opacity="0"
@@ -66,7 +71,9 @@
                 Clicked="OnClickedChangeToActivityPage"
                 Margin="20"
                 Padding="10"
-                WidthRequest="160"/>
+                WidthRequest="160"
+                BorderColor="DarkRed"
+                BorderWidth="5"/>
             <Button
                 x:Name="AdminButton"
                 Opacity="0"
@@ -80,7 +87,8 @@
                 Clicked="OnClickedChangeToAdminPage"
                 Margin="20"
                 Padding="10"
-                WidthRequest="150"/>
+                WidthRequest="150"                                BorderColor="DarkRed"
+                BorderWidth="5"/>
         </VerticalStackLayout>
     </ScrollView>
 </ContentPage>
