@@ -24,30 +24,30 @@ public partial class ActivityPage : ContentPage
             player.Volume = 0.5;
             player.Play();
             ImageDisco.Source = "dance.gif";
-            //if(WeatherLabel.Text == null)
-            //{
-            //    NoWeatherLabel.IsVisible = true;
-            //    ImagePool.Source = "spookypoolhuh.png";
-            //    ImageBowling.Source = "spookybowlinghuh.png";
-            //}
-            //else if(WeatherLabel.Text != null)
-            //{
-            WeatherLabel.IsVisible = true;
-            //}
-            //pageStarted = true;
-            //if(WeatherLabel.IsVisible == true) 
-            //{
-            //if (WeatherLabel.Text.Contains("pool"))
-            //{
-                ImagePool.Source = "spookypool.png";
-                //    ImageBowling.Source = "spookybowlingclosed.png";
-                //}
-                //else if(WeatherLabel.Text.Contains("bowling"))
-                //{
-                    //ImagePool.Source = "spookypoolclosed.png";
-                    ImageBowling.Source = "spookybowling.png";
-                //}
-            //}
+            if (WeatherLabel.Text == null)
+            {
+                NoWeatherLabel.IsVisible = true;
+                ImagePool.Source = "spookypoolhuh.png";
+                ImageBowling.Source = "spookybowlinghuh.png";
+            }
+            else if (WeatherLabel.Text != null)
+            {
+                WeatherLabel.IsVisible = true;
         }
+        pageStarted = true;
+        if (WeatherLabel.IsVisible == true)
+        {
+            if (WeatherLabel.Text.Contains("Pool"))
+            {
+                ImagePool.Source = "spookypool.png";
+            ImageBowling.Source = "spookybowlingclosed.png";
+        }
+        else if (WeatherLabel.Text.Contains("bowling"))
+        {
+            ImagePool.Source = "spookypoolclosed.png";
+            ImageBowling.Source = "spookybowling.png";
+        }
+    }
+}
     }
 }
